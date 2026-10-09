@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سامانه ۲۶۷۱ | CRM تارا — ثبت و تبادل آفلاین تماس‌ها</title>
+<style>
+:root{font-family:Tahoma,"Segoe UI",sans-serif;color:#1f2937;background:#f4f6fa}*{box-sizing:border-box}body{margin:0}header{background:#183153;color:#fff;padding:22px 5vw}header h1{margin:0 0 8px;font-size:23px}header p{margin:0;color:#d8e4f4;font-size:13px}.wrap{max-width:1280px;margin:22px auto;padding:0 16px}.stats{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-bottom:16px}.stat,.panel{background:#fff;border:1px solid #e1e7ef;border-radius:12px;padding:16px;box-shadow:0 2px 8px #10203008}.stat small{color:#64748b}.stat strong{display:block;font-size:22px;margin-top:8px}.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}.panel h2{font-size:17px;margin:0 0 14px}.panel h3{font-size:14px;margin:14px 0 8px;color:#183153}.field{margin-bottom:12px}.field label{display:block;font-size:13px;margin-bottom:6px;color:#475569}.field small.srcnote{display:block;font-size:11px;color:#64748b;margin-top:4px}.field input,.field select,.field textarea,.toolbar select{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:10px;font:inherit;font-size:13px;background:#fff}.field input:disabled{background:#f1f5f9;color:#94a3b8}.field textarea{min-height:78px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.btn{border:0;border-radius:8px;padding:10px 14px;font:inherit;font-size:13px;cursor:pointer;background:#1d4ed8;color:#fff}.btn.sm{padding:4px 10px;font-size:12px;margin:2px}.btn:disabled{opacity:.5;cursor:wait}.btn.secondary{background:#e8eef7;color:#1e3a5f}.btn.danger{background:#b91c1c}.btn.green{background:#047857}.hint{font-size:12px;color:#64748b;line-height:1.9}.tablewrap{overflow:auto;margin-top:12px;max-height:620px}table{width:100%;border-collapse:collapse;min-width:900px}table.mini{min-width:600px}th,td{padding:9px;border-bottom:1px solid #e5e7eb;text-align:right;font-size:12px;vertical-align:top}th{background:#f8fafc;color:#475569;position:sticky;top:0}.tag{display:inline-block;background:#e0f2fe;color:#075985;border-radius:20px;padding:3px 8px;font-size:11px;white-space:nowrap}.tag.ok{background:#d1fae5;color:#065f46}.status{margin-top:12px;font-size:12px;white-space:pre-wrap;line-height:1.9}.status.ok{color:#047857}.status.err{color:#b91c1c}.full{margin-top:16px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.toolbar input{flex:1;min-width:180px;border:1px solid #cbd5e1;border-radius:8px;padding:10px;font:inherit}.toolbar select{width:auto;min-width:150px}.footer{color:#64748b;font-size:11px;padding:18px 0;text-align:center}
+.combo{position:relative}.combo-list{position:absolute;z-index:30;top:100%;right:0;left:0;max-height:260px;overflow:auto;background:#fff;border:1px solid #94a3b8;border-radius:8px;box-shadow:0 8px 24px #0f172a22;margin-top:2px}.combo-item{padding:8px 10px;cursor:pointer;font-size:13px;display:flex;flex-direction:column;gap:2px}.combo-item small{color:#64748b;font-size:11px}.combo-item:hover,.combo-item.active{background:#e0ecff}.combo-empty{padding:8px 10px;font-size:12px;color:#64748b}
+.casecard{border:1px solid #bfdbfe;background:#f0f7ff;border-radius:10px;padding:12px;margin:6px 0 14px}.cardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.kv small{display:block;color:#64748b;font-size:11px}.kv strong{font-size:13px;word-break:break-all}.warn{margin-top:10px;font-size:12px;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:8px;line-height:1.9}
+.optbox{border:1px solid #e1e7ef;border-radius:8px;padding:8px 10px;margin:6px 0;background:#fcfdff}.optbox.bound{border-color:#86efac;background:#f6fef9}.optbox summary{cursor:pointer;font-size:13px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.chip{background:#eef2ff;color:#3730a3;border-radius:6px;padding:3px 8px;font-size:12px}
+fieldset{border:1px solid #e1e7ef;border-radius:10px;margin:0 0 12px;padding:10px 12px}legend{font-size:12px;color:#475569;padding:0 6px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.cardgrid{grid-template-columns:repeat(2,1fr)}.row3{grid-template-columns:1fr}header h1{font-size:19px}}
+</style></head>
+<body>
+<header><h1>سامانه ۲۶۷۱ — CRM تارا: ثبت و تبادل آفلاین تماس‌ها</h1><p>یک فایل مستقل، بدون نیاز به اینترنت یا نصب؛ داده‌ها در مرورگر همین رایانه ذخیره می‌شوند و تبادل بین رایانه‌ها فقط از راه فایل خروجی/ورودی انجام می‌شود (همگام‌سازی خودکار وجود ندارد).</p></header>
+<div class="wrap">
+<div class="stats"><div class="stat"><small>کل تماس‌های این رایانه</small><strong id="total">۰</strong></div><div class="stat"><small>پرونده‌های دارای تماس</small><strong id="cases">۰</strong></div><div class="stat"><small>پرونده‌های بارگذاری‌شده از اکسل</small><strong id="masterCount">۰</strong></div><div class="stat"><small>کارشناس فعال این رایانه</small><strong id="workerStat">K01</strong></div><div class="stat"><small>بسته‌های واردشده</small><strong id="bundles">۰</strong></div></div>
+<div class="actions" style="margin-bottom:14px"><button class="btn secondary" type="button" id="settingsToggle">تنظیمات کارشناسان</button><button class="btn secondary" type="button" id="optionsToggle">فهرست گزینه‌ها و ساختار اکسل</button></div>
+
+<section class="panel" id="settingsPanel" hidden style="margin-bottom:16px"><h2>تنظیم نام کارشناسان</h2><p class="hint">نام هر کد را ویرایش کنید. کد کارشناس (K01…) در سوابق ثابت می‌ماند و نام ثبت‌شده در هر تماس در لحظه ثبت نگه داشته می‌شود؛ بنابراین تغییر نام، سوابق قدیمی را بازنویسی نمی‌کند. نام‌ها باید یکتا باشند.</p><div id="workerSettings" class="row"></div><div class="actions"><button class="btn" type="button" id="saveWorkersBtn">ذخیره نام کارشناسان</button><button class="btn secondary" type="button" id="addWorkerBtn">افزودن کد کارشناس جدید</button><button class="btn secondary" type="button" id="resetWorkersBtn">بازگردانی نگاشت اولیه K01–K10</button></div><div id="settingsStatus" class="status" aria-live="polite"></div><h3>تطبیق نام کارشناسان فایل اکسل با کدها</h3><div id="workerMapReport"></div></section>
+
+<section class="panel" id="optionsPanel" hidden style="margin-bottom:16px"><h2>فهرست‌های گزینه (منبع: شیت «تنظیمات» اکسل شماره ۱۱)</h2><p class="hint">گزینه‌های فرم تماس مستقیماً از همین فهرست‌ها ساخته می‌شوند و در HTML دستی تکرار نشده‌اند. اتصال هر فیلد به فهرستش از اعتبارسنجی داده (Data Validation) ستون متناظر در شیت «تاریخچه تماس» خوانده می‌شود. با بارگذاری یک فایل اکسل جدید، فهرست‌ها از همان فایل به‌روز می‌شوند. فهرست‌های «تکمیلی» (Extended) در اکسل به هیچ ستونی از شیت تماس متصل نیستند و فقط نمایش داده می‌شوند.</p><div class="actions"><button class="btn secondary" type="button" id="resetOptionsBtn">بازگردانی فهرست‌ها به نسخه تعبیه‌شده</button></div><div id="optionsStatus" class="status" aria-live="polite"></div><div id="optionLists"></div><h3>ساختار شیت‌های آخرین فایل بارگذاری‌شده</h3><div id="structureReport"></div></section>
+
+<section class="panel" style="margin-bottom:16px"><h2>ورود اطلاعات پایه پرونده‌ها از اکسل</h2><p class="hint">فایل اکسل شماره ۱۱ را انتخاب کنید؛ شیت «پرونده‌ها» (کد پرونده، کد ملی، نام پذیرنده، شماره تماس، دیرکرد، بدهی‌ها، تاریخ معرفی، کارشناس و …) و فهرست‌های شیت «تنظیمات» خوانده می‌شوند. «کد پرونده» عیناً از ستون خودش خوانده می‌شود و از کد ملی ساخته نمی‌شود. ورود دوباره همان فایل، پرونده تکراری نمی‌سازد و هیچ پرونده یا تماسی حذف نمی‌شود.</p><div class="row"><div class="field"><label for="caseExcelFile">انتخاب فایل اکسل (.xlsx)</label><input id="caseExcelFile" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div><div class="field" style="align-self:end"><button class="btn" type="button" id="loadCasesBtn">بارگذاری پرونده‌ها و فهرست‌ها</button></div></div><div id="caseExcelStatus" class="status" aria-live="polite"></div></section>
+
+<div class="grid">
+<section class="panel"><h2>ثبت تماس جدید</h2>
+<form id="callForm" novalidate>
+<fieldset><legend>۱) انتخاب پرونده</legend>
+<div id="noMasterHint" class="hint">هنوز فایل اکسل پرونده‌ها بارگذاری نشده است؛ می‌توانید اطلاعات پرونده را دستی وارد کنید، یا پس از بارگذاری اکسل پرونده را با کد پرونده، کد ملی یا نام جست‌وجو و انتخاب کنید.</div>
+<div id="lookupBox" hidden><div class="row3"><div class="field"><label for="lookupCaseCode">جست‌وجو با کد پرونده</label><input id="lookupCaseCode" autocomplete="off" placeholder="مثلاً TARA-1818330423"></div><div class="field"><label for="lookupNationalId">جست‌وجو با کد ملی</label><input id="lookupNationalId" autocomplete="off" inputmode="numeric" placeholder="کد ملی"></div><div class="field"><label for="lookupPerson">جست‌وجو با نام پذیرنده</label><input id="lookupPerson" autocomplete="off" placeholder="نام و نام خانوادگی"></div></div><div class="actions"><button type="button" class="btn secondary sm" id="clearCaseBtn">پاک کردن انتخاب پرونده</button></div></div>
+<div id="caseSelStatus" class="status" aria-live="polite"></div>
+<div id="caseCard" class="casecard" hidden></div>
+<div id="manualBox"><div class="row"><div class="field"><label for="caseId">شناسه پرونده *</label><input id="caseId" maxlength="80" placeholder="کد پرونده"></div><div class="field"><label for="person">نام پذیرنده</label><input id="person" maxlength="160"></div></div><div class="row"><div class="field"><label for="phone">شماره تماس</label><input id="phone" maxlength="40" inputmode="tel"></div><div class="field"><label for="delayDays">روز دیرکرد</label><input id="delayDays" inputmode="numeric"></div></div><div class="row"><div class="field"><label for="originalDebt">اصل بدهی</label><input id="originalDebt" inputmode="numeric"></div><div class="field"><label for="totalDebt">کل بدهی</label><input id="totalDebt" inputmode="numeric"></div></div><div class="field"><label for="introDate">تاریخ معرفی</label><input id="introDate" placeholder="مثلاً 1404-07-17"></div></div>
+</fieldset>
+<fieldset><legend>۲) مشخصات تماس</legend>
+<div class="row3"><div class="field"><label for="worker">کارشناس ثبت‌کننده تماس</label><select id="worker"></select></div><div class="field"><label for="callDate">تاریخ تماس *</label><input id="callDate" placeholder="1405/07/17" dir="ltr" style="text-align:right"></div><div class="field"><label for="callTime">ساعت</label><input id="callTime" placeholder="14:30" dir="ltr" style="text-align:right"></div></div>
+<div class="row"><div class="field"><label for="fld_callResult">نتیجه تماس *</label><input id="fld_callResult" autocomplete="off" placeholder="جست‌وجو یا انتخاب از فهرست"><small class="srcnote" id="src_callResult"></small></div><div class="field"><label for="fld_conversationResult">نتیجه مکالمه</label><input id="fld_conversationResult" autocomplete="off" placeholder="جست‌وجو یا انتخاب از فهرست"><small class="srcnote" id="src_conversationResult"></small></div></div>
+<div class="row"><div class="field"><label for="fld_merchantRequest">درخواست پذیرنده</label><input id="fld_merchantRequest" autocomplete="off" placeholder="جست‌وجو یا انتخاب از فهرست"><small class="srcnote" id="src_merchantRequest"></small></div><div class="field"><label for="fld_commitmentCreated">تعهد ایجاد شد؟</label><select id="fld_commitmentCreated"></select><small class="srcnote" id="src_commitmentCreated"></small></div></div>
+<div class="row3"><div class="field"><label id="lbl_commitmentType" for="fld_commitmentType">نوع تعهد</label><input id="fld_commitmentType" autocomplete="off" placeholder="فقط با «تعهد = بله»" disabled><small class="srcnote" id="src_commitmentType"></small></div><div class="field"><label for="commitmentDate">تاریخ تعهد</label><input id="commitmentDate" placeholder="1405/08/01" dir="ltr" style="text-align:right" disabled></div><div class="field"><label for="commitmentAmount">مبلغ تعهد (ریال)</label><input id="commitmentAmount" inputmode="numeric" disabled></div></div>
+<div class="row"><div class="field"><label for="fld_nextCallNeeded">تماس بعدی لازم؟</label><select id="fld_nextCallNeeded"></select><small class="srcnote" id="src_nextCallNeeded"></small></div><div class="field"><label id="lbl_nextDate" for="nextDate">تاریخ پیگیری بعدی</label><input id="nextDate" placeholder="1405/07/20" dir="ltr" style="text-align:right"></div></div>
+<div class="field"><label for="notes">شرح تماس / توضیحات</label><textarea id="notes" maxlength="3000" placeholder="خلاصه دقیق مکالمه، وعده و اقدام بعدی"></textarea></div>
+</fieldset>
+<div class="actions"><button class="btn" type="submit">ثبت تماس</button><button class="btn secondary" type="reset">پاک‌کردن فرم</button></div><div id="formStatus" class="status" aria-live="polite"></div></form></section>
+
+<section class="panel"><h2>خروجی و تجمیع اطلاعات</h2><div class="field"><label for="role">نقش این رایانه</label><select id="role"><option value="worker">کارشناس — خروجی تماس‌های خودم</option><option value="supervisor">سرپرست — خروجی کل و ورود بسته‌ها</option></select></div>
+<label class="hint" style="display:block;margin-bottom:8px"><input type="checkbox" id="onlyFiltered"> فقط نتایج فیلتر/جست‌وجوی فعلی جدول خروجی گرفته شود</label>
+<div class="actions"><button class="btn green" id="xlsxBtn" type="button">خروجی اکسل (.xlsx)</button><button class="btn secondary" id="csvBtn" type="button">خروجی گزارش (CSV)</button><button class="btn green" id="exportBtn" type="button">خروجی بسته تماس‌ها (JSON)</button><button class="btn secondary" id="backupBtn" type="button">پشتیبان کامل این رایانه</button></div>
+<div class="field" style="margin-top:16px"><label for="callsExcelFile">ورود خروجی تماس‌ها از اکسل (.xlsx)</label><input id="callsExcelFile" type="file" accept=".xlsx"></div><div class="actions"><button class="btn" type="button" id="importExcelCallsBtn">ورود و تجمیع تماس‌های اکسل</button></div>
+<div class="hint">فایل خروجی کارشناسان (یا شیت «تاریخچه تماس» اکسل ۱۱) را می‌خواند و با «شناسه یکتای تماس» تکراری‌ها را حذف می‌کند؛ تماس‌های مستقل یک پرونده باقی می‌مانند. ردیف‌های بدون شناسه پایدار، شناسه ثابت مشتق‌شده از محتوا می‌گیرند تا ورود دوباره تکرار نسازد؛ شناسه یکسان با محتوای متفاوت «تعارض» گزارش می‌شود و اعمال نمی‌شود.</div>
+<div class="field" style="margin-top:16px"><label for="importFile">ورود بسته تماس یا بازیابی پشتیبان (JSON)</label><input id="importFile" type="file" accept=".json,application/json"></div><div class="actions"><button class="btn" id="importBtn" type="button">اعتبارسنجی و تجمیع بسته</button><button class="btn danger" id="restoreBtn" type="button">بازیابی از پشتیبان کامل</button></div>
+<div class="hint">ورود مجدد یک بسته یا یک تماس تکراری، رکورد جدید ایجاد نمی‌کند. در این نسخه فقط سابقه تماس تبادل می‌شود؛ اطلاعات پایه پرونده از اکسل ۱۱ بارگذاری می‌شود و پرداخت، تعهد (شیت‌های مستقل) و اقدامات شورا در این ابزار ثبت یا تغییر نمی‌کنند.</div><div id="ioStatus" class="status" aria-live="polite"></div></section>
+</div>
+
+<section class="panel full"><div class="toolbar"><h2 style="margin:0">سوابق تماس ثبت‌شده</h2><input id="search" placeholder="جست‌وجو بر اساس کد پرونده، کد ملی، نام، کارشناس، نتیجه یا شرح..."><select id="filterWorker"></select><select id="filterResult"></select><button class="btn secondary" id="refreshBtn" type="button">به‌روزرسانی</button></div>
+<div class="tablewrap"><table><thead><tr><th>زمان ثبت</th><th>کد پرونده</th><th>نام پذیرنده</th><th>کارشناس</th><th>تاریخ/ساعت تماس</th><th>نتیجه تماس</th><th>نتیجه مکالمه</th><th>درخواست پذیرنده</th><th>تعهد</th><th>پیگیری بعدی</th><th>شرح تماس</th><th>شناسه تماس</th></tr></thead><tbody id="rows"></tbody></table></div><div id="empty" class="hint">هنوز تماسی ثبت نشده است.</div></section>
+<div class="footer">ذخیره‌سازی این نسخه در مرورگر همین رایانه انجام می‌شود. برای جلوگیری از حذف ناخواسته، مرتب «پشتیبان کامل» بگیرید و فایل خروجی را در محل مجاز سازمانی نگه دارید. این نسخه هیچ کتابخانه یا منبع خارجی بارگذاری نمی‌کند.</div>
+</div>
+<script>
+(()=>{'use strict';
+/* ===== بخش ۱: ابزارهای پایه، خواندن/نوشتن ZIP و XLSX (بدون کتابخانه خارجی) ===== */
+const $=id=>document.getElementById(id);
+const fa=n=>String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d]);
+const safe=(v,max=3000)=>String(v??'').trim().slice(0,max);
+const toLatinDigits=s=>String(s??'').replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+const norm=s=>toLatinDigits(s).replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[\u200c\u200d\u200e\u200f\u0640]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
+const normKey=s=>norm(s).replace(/[\s_\-]+/g,'');
+function el(tag,props,...kids){const e=document.createElement(tag);if(props)for(const[k,v]of Object.entries(props)){if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else if(k==='dir')e.dir=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const kid of kids.flat())if(kid!=null)e.append(kid.nodeType?kid:document.createTextNode(String(kid)));return e}
+function status(id,msg,ok=true){const n=$(id);n.textContent=msg;n.className='status '+(ok?'ok':'err')}
+function fmtNum(s){const t=String(s??'').trim();if(/^\d{1,15}$/.test(t))return Number(t).toLocaleString('fa-IR');return t}
+function load(key,fallback){try{const v=JSON.parse(localStorage.getItem(key)||'null');return v??fallback}catch{return fallback}}
+function store(key,val){try{localStorage.setItem(key,JSON.stringify(val));return true}catch{return false}}
+const nowIso=()=>new Date().toISOString();
+function toJalali(gy,gm,gd){const gdm=[0,31,59,90,120,151,181,212,243,273,304,334];let jy=gy>1600?979:0;gy-=gy>1600?1600:621;const gy2=gm>2?gy+1:gy;let days=365*gy+Math.floor((gy2+3)/4)-Math.floor((gy2+99)/100)+Math.floor((gy2+399)/400)-80+gd+gdm[gm-1];jy+=33*Math.floor(days/12053);days%=12053;jy+=4*Math.floor(days/1461);days%=1461;if(days>365){jy+=Math.floor((days-1)/365);days=(days-1)%365}const jm=days<186?1+Math.floor(days/31):7+Math.floor((days-186)/30);const jd=1+(days<186?days%31:(days-186)%30);return[jy,jm,jd]}
+function todayJalali(){const d=new Date();const[y,m,dd]=toJalali(d.getFullYear(),d.getMonth()+1,d.getDate());return `${y}/${String(m).padStart(2,'0')}/${String(dd).padStart(2,'0')}`}
+function nowTime(){const d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+function parseJalaliDate(s){const t=toLatinDigits(s).trim();if(!t)return'';const m=t.match(/^(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})$/);if(!m)return null;const y=+m[1],mo=+m[2],d=+m[3];if(y<1300||y>1600||mo<1||mo>12||d<1||d>(mo<=6?31:30))return null;return `${y}/${String(mo).padStart(2,'0')}/${String(d).padStart(2,'0')}`}
+function parseTime(s){const t=toLatinDigits(s).trim();if(!t)return'';const m=t.match(/^(\d{1,2}):(\d{2})$/);if(!m||+m[1]>23||+m[2]>59)return null;return m[1].padStart(2,'0')+':'+m[2]}
+function parseAmount(s){const t=toLatinDigits(s).replace(/[,٬،\s]/g,'');if(!t)return'';return /^\d{1,18}$/.test(t)?t:null}
+function hash53(str){let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<str.length;i++){const ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (4294967296*(2097151&h2)+(h1>>>0)).toString(36).toUpperCase()}
+
+/* ---------- ZIP: خواندن ---------- */
+const td=new TextDecoder('utf-8');
+function u16(d,o){return d[o]|d[o+1]<<8}
+function u32(d,o){return(d[o]|d[o+1]<<8|d[o+2]<<16|d[o+3]<<24)>>>0}
+async function openZip(buf){
+  if(typeof DecompressionStream==='undefined')throw Error('مرورگر شما قابلیت لازم برای خواندن فایل اکسل (DecompressionStream) را ندارد؛ از نسخه جدید Chrome، Edge، Firefox یا Safari استفاده کنید.');
+  const d=new Uint8Array(buf);let e=-1;
+  for(let i=d.length-22;i>=Math.max(0,d.length-65557);i--){if(d[i]===0x50&&d[i+1]===0x4b&&d[i+2]===5&&d[i+3]===6){e=i;break}}
+  if(e<0)throw Error('فایل انتخاب‌شده یک فایل اکسل (.xlsx) معتبر نیست (ساختار ZIP پیدا نشد). فرمت قدیمی .xls پشتیبانی نمی‌شود؛ فایل را به .xlsx ذخیره کنید.');
+  const n=u16(d,e+10);let p=u32(d,e+16);const entries=new Map();
+  for(let i=0;i<n;i++){
+    if(u32(d,p)!==0x02014b50)throw Error('ساختار ZIP فایل اکسل آسیب دیده است.');
+    const method=u16(d,p+10),csize=u32(d,p+20),nl=u16(d,p+28),el_=u16(d,p+30),cl=u16(d,p+32),off=u32(d,p+42);
+    const name=td.decode(d.subarray(p+46,p+46+nl));entries.set(name,{method,csize,off});p+=46+nl+el_+cl;
+  }
+  return{d,entries};
+}
+function zipDataStart(z,en){const d=z.d,o=en.off;if(u32(d,o)!==0x04034b50)throw Error('هدر داخلی ZIP نامعتبر است.');return o+30+u16(d,o+26)+u16(d,o+28)}
+async function zipBytes(z,name){
+  const en=z.entries.get(name);if(!en)return null;const s=zipDataStart(z,en);const raw=z.d.subarray(s,s+en.csize);
+  if(en.method===0)return raw;
+  if(en.method!==8)throw Error('روش فشرده‌سازی پشتیبانی‌نشده در فایل اکسل.');
+  const stream=new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+async function zipText(z,name){const b=await zipBytes(z,name);return b?td.decode(b):null}
+async function zipHead(z,name,stopRe,cap=400000){
+  const en=z.entries.get(name);if(!en)return null;const s=zipDataStart(z,en);const raw=z.d.subarray(s,s+en.csize);
+  if(en.method===0)return td.decode(raw.subarray(0,cap));
+  const reader=new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw')).getReader();
+  const dec=new TextDecoder('utf-8');let txt='';
+  try{while(true){const{done,value}=await reader.read();if(done)break;txt+=dec.decode(value,{stream:true});if(stopRe.test(txt)||txt.length>cap)break}}finally{try{await reader.cancel()}catch{}}
+  return txt;
+}
+/* ---------- XLSX: خواندن ---------- */
+function xmlDecode(s){return s.replace(/&(#x[0-9a-fA-F]+|#\d+|amp|lt|gt|quot|apos);/g,(m,g)=>{if(g==='amp')return'&';if(g==='lt')return'<';if(g==='gt')return'>';if(g==='quot')return'"';if(g==='apos')return"'";const c=g[1]==='x'?parseInt(g.slice(2),16):parseInt(g.slice(1),10);try{return String.fromCodePoint(c)}catch{return''}}).replace(/_x([0-9A-Fa-f]{4})_/g,(m,h)=>String.fromCharCode(parseInt(h,16)))}
+function attrsOf(s){const o={};const re=/([\w:.-]+)\s*=\s*"([^"]*)"/g;let m;while((m=re.exec(s)))o[m[1]]=xmlDecode(m[2]);return o}
+function parseSST(xml){const out=[];const re=/<si(?:\s[^>]*)?(?:\/>|>([\s\S]*?)<\/si>)/g;let m;while((m=re.exec(xml))){if(m[1]===undefined){out.push('');continue}const body=m[1].replace(/<rPh[\s\S]*?<\/rPh>/g,'');let s='';const t=/<t(?:\s[^>]*)?>([\s\S]*?)<\/t>/g;let k;while((k=t.exec(body)))s+=k[1];out.push(xmlDecode(s))}return out}
+function colToNum(c){let n=0;for(const ch of c)n=n*26+ch.charCodeAt(0)-64;return n}
+function numToCol(n){let s='';while(n>0){const r=(n-1)%26;s=String.fromCharCode(65+r)+s;n=Math.floor((n-1)/26)}return s}
+function parseSheetXml(xml,sst,maxColNum=Infinity){
+  const rows=new Map(),formulas=new Map();const sd=xml.indexOf('<sheetData');if(sd<0)return{rows,formulas};
+  const ed=xml.indexOf('</sheetData>');const body=xml.slice(sd,ed<0?undefined:ed);
+  const cellRe=/<c\s([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g;let m;
+  while((m=cellRe.exec(body))){
+    const a=attrsOf(m[1]);const rm=/^([A-Z]+)(\d+)$/.exec(a.r||'');if(!rm)continue;
+    if(colToNum(rm[1])>maxColNum)continue;const inner=m[2];if(!inner)continue;
+    const fm=/<f(?:\s[^>]*?)?(?:\/>|>([\s\S]*?)<\/f>)/.exec(inner);
+    if(fm&&fm[1]){const k=rm[1]+rm[2];formulas.set(k,xmlDecode(fm[1]))}
+    let val='';const t=a.t;
+    if(t==='inlineStr'){const is=/<is>([\s\S]*?)<\/is>/.exec(inner);if(is){let s='';const tt=/<t(?:\s[^>]*)?>([\s\S]*?)<\/t>/g;let k;while((k=tt.exec(is[1])))s+=k[1];val=xmlDecode(s)}}
+    else{const vm=/<v>([\s\S]*?)<\/v>/.exec(inner);if(!vm)continue;const raw=vm[1];
+      if(t==='s')val=sst[+raw]??'';else if(t==='str')val=xmlDecode(raw);else if(t==='b')val=raw==='1'?'TRUE':'FALSE';else if(t==='e')val='';else val=raw.trim()}
+    if(val==='')continue;const rn=+rm[2];let r=rows.get(rn);if(!r){r={};rows.set(rn,r)}r[rm[1]]=val;
+  }
+  return{rows,formulas};
+}
+function parseDataValidations(xml){const out=[];const re=/<dataValidation\s([^>]*?)(?:\/>|>([\s\S]*?)<\/dataValidation>)/g;let m;while((m=re.exec(xml))){const a=attrsOf(m[1]);const f1=/<formula1>([\s\S]*?)<\/formula1>/.exec(m[2]||'');out.push({sqref:a.sqref||'',type:a.type||'',formula1:f1?xmlDecode(f1[1]):''})}return out}
+async function readWorkbook(file){
+  const z=await openZip(await file.arrayBuffer());
+  const wbXml=await zipText(z,'xl/workbook.xml');if(!wbXml)throw Error('فایل xl/workbook.xml در فایل اکسل پیدا نشد؛ فایل معتبر نیست.');
+  const relXml=await zipText(z,'xl/_rels/workbook.xml.rels')||'';const rels={};
+  for(const m of relXml.matchAll(/<Relationship\s([^>]*?)\/>/g)){const a=attrsOf(m[1]);rels[a.Id]=a.Target}
+  const sheets=[];for(const m of wbXml.matchAll(/<sheet\s([^>]*?)\/>/g)){const a=attrsOf(m[1]);let t=rels[a['r:id']]||'';t=t.startsWith('/')?t.slice(1):'xl/'+t;sheets.push({name:a.name,state:a.state||'visible',path:t})}
+  const defined=new Map();for(const m of wbXml.matchAll(/<definedName\s([^>]*?)>([\s\S]*?)<\/definedName>/g)){const a=attrsOf(m[1]);if(a.localSheetId!==undefined)continue;defined.set(a.name,xmlDecode(m[2]))}
+  const sstXml=await zipText(z,'xl/sharedStrings.xml');const sst=sstXml?parseSST(sstXml):[];
+  return{z,sheets,defined,sst,cache:new Map()};
+}
+function findSheet(wk,...names){const keys=names.map(normKey);return wk.sheets.find(s=>keys.includes(normKey(s.name)))||null}
+async function loadSheet(wk,sheet,maxCol=Infinity){const k=sheet.path+'|'+maxCol;if(wk.cache.has(k))return wk.cache.get(k);const xml=await zipText(wk.z,sheet.path);if(xml==null)throw Error(`محتوای شیت «${sheet.name}» در فایل پیدا نشد.`);const r=parseSheetXml(xml,wk.sst,maxCol);r.xml=xml;wk.cache.set(k,r);return r}
+function resolveRange(wk,ref){const m=/^(?:'((?:[^']|'')+)'|([^!']+))!\$?([A-Z]+)\$?(\d+)(?::\$?([A-Z]+)\$?(\d+))?$/.exec(ref.trim());if(!m)return null;return{sheet:(m[1]||m[2]).replace(/''/g,"'"),c1:m[3],r1:+m[4],c2:m[5]||m[3],r2:+(m[6]||m[4])}}
+/* ---------- XLSX: نوشتن ---------- */
+const CRCT=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+function crc32(u8){let c=0xFFFFFFFF;for(let i=0;i<u8.length;i++)c=CRCT[(c^u8[i])&255]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function makeZip(files){
+  const enc=new TextEncoder(),chunks=[],central=[];let off=0;const dt=new Date();
+  const time=(dt.getHours()<<11)|(dt.getMinutes()<<5)|(dt.getSeconds()>>1),date=((dt.getFullYear()-1980)<<9)|((dt.getMonth()+1)<<5)|dt.getDate();
+  for(const f of files){
+    const name=enc.encode(f.name),data=typeof f.data==='string'?enc.encode(f.data):f.data,crc=crc32(data);
+    const h=new DataView(new ArrayBuffer(30));h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(8,0,true);h.setUint16(10,time,true);h.setUint16(12,date,true);h.setUint32(14,crc,true);h.setUint32(18,data.length,true);h.setUint32(22,data.length,true);h.setUint16(26,name.length,true);h.setUint16(28,0,true);
+    chunks.push(new Uint8Array(h.buffer),name,data);
+    const c=new DataView(new ArrayBuffer(46));c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x0800,true);c.setUint16(10,0,true);c.setUint16(12,time,true);c.setUint16(14,date,true);c.setUint32(16,crc,true);c.setUint32(20,data.length,true);c.setUint32(24,data.length,true);c.setUint16(28,name.length,true);c.setUint32(42,off,true);
+    central.push(new Uint8Array(c.buffer),name);off+=30+name.length+data.length;
+  }
+  let csize=0;for(const c of central)csize+=c.length;
+  const e=new DataView(new ArrayBuffer(22));e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,csize,true);e.setUint32(16,off,true);
+  return new Blob([...chunks,...central,new Uint8Array(e.buffer)],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+}
+const xmlEsc=s=>String(s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+/* sheets: [{name,headers:[],rows:[[...]],widths:[],kinds:['text'|'num'|'wrap']}] */
+function buildXlsx(sheets){
+  const NS='http://schemas.openxmlformats.org/spreadsheetml/2006/main',RNS='http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+  const files=[];
+  files.push({name:'[Content_Types].xml',data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>${sheets.map((s,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`});
+  files.push({name:'_rels/.rels',data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`});
+  files.push({name:'xl/workbook.xml',data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="${NS}" xmlns:r="${RNS}"><bookViews><workbookView/></bookViews><sheets>${sheets.map((s,i)=>`<sheet name="${xmlEsc(s.name)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')}</sheets></workbook>`});
+  files.push({name:'xl/_rels/workbook.xml.rels',data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${sheets.map((s,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')}<Relationship Id="rId${sheets.length+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`});
+  files.push({name:'xl/styles.xml',data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="${NS}"><fonts count="2"><font><sz val="11"/><name val="Tahoma"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Tahoma"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF183153"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="5"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment horizontal="center" vertical="center" wrapText="1"/></xf><xf numFmtId="49" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/><xf numFmtId="1" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/><xf numFmtId="49" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`});
+  sheets.forEach((s,i)=>{
+    const nc=s.headers.length,last=numToCol(nc)+(s.rows.length+1);let x=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="${NS}"><sheetViews><sheetView rightToLeft="1" workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="15"/><cols>${s.headers.map((h,j)=>`<col min="${j+1}" max="${j+1}" width="${(s.widths&&s.widths[j])||18}" customWidth="1"/>`).join('')}</cols><sheetData>`;
+    x+=`<row r="1" ht="30" customHeight="1">${s.headers.map((h,j)=>`<c r="${numToCol(j+1)}1" s="1" t="inlineStr"><is><t xml:space="preserve">${xmlEsc(h)}</t></is></c>`).join('')}</row>`;
+    s.rows.forEach((row,ri)=>{const rn=ri+2;x+=`<row r="${rn}">`;row.forEach((v,j)=>{const ref=numToCol(j+1)+rn,k=(s.kinds&&s.kinds[j])||'text';if(v===''||v==null)return;
+      if(k==='num'&&/^[1-9]\d{0,14}$|^0$/.test(String(v)))x+=`<c r="${ref}" s="3"><v>${v}</v></c>`;
+      else x+=`<c r="${ref}" s="${k==='wrap'?4:2}" t="inlineStr"><is><t xml:space="preserve">${xmlEsc(v)}</t></is></c>`});x+='</row>'});
+    x+=`</sheetData>${s.rows.length?`<autoFilter ref="A1:${last}"/>`:''}</worksheet>`;
+    files.push({name:`xl/worksheets/sheet${i+1}.xml`,data:x});
+  });
+  return makeZip(files);
+}
+function downloadBlob(name,blob){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
+function download(name,content,type='application/json;charset=utf-8'){downloadBlob(name,new Blob(['\ufeff',content],{type}))}
+
+/* ===== بخش ۲: ذخیره‌سازی، مهاجرت، فهرست‌های گزینه (متصل به اکسل ۱۱)، کارشناسان ===== */
+const KEY='s2671_calls_v1',IMPORTS='s2671_imported_bundles_v1',WORKER_KEY='s2671_worker_names_v1',CASES_V1='s2671_master_cases_v1',CASES_KEY='s2671_master_cases_v2',OPTS_KEY='s2671_option_lists_v1',PREFS_KEY='s2671_prefs_v1',PREBACKUP_KEY='s2671_prebackup_v2',VERSION=2;
+/* پیش از هر تغییر ساختاری: نسخه پشتیبان خام از داده‌های قبلی (فقط یک‌بار) */
+(function preBackup(){try{if(localStorage.getItem(PREBACKUP_KEY))return;const old={};let any=false;for(const k of [KEY,IMPORTS,WORKER_KEY,CASES_V1]){const v=localStorage.getItem(k);if(v!==null){old[k]=v;any=true}}if(any)localStorage.setItem(PREBACKUP_KEY,JSON.stringify({createdAt:nowIso(),note:'نسخه خام داده‌های قبل از ارتقا به نسخه ۲؛ کلیدهای قدیمی حذف نشده‌اند.',data:old}))}catch{}})();
+
+const CALL_FIELDS=[ /* فیلدهای فهرستی فرم تماس؛ header = عنوان ستون در شیت «تاریخچه تماس» */
+ {key:'callResult',header:'نتیجه تماس',required:true,kind:'combo'},
+ {key:'conversationResult',header:'نتیجه مکالمه',kind:'combo'},
+ {key:'merchantRequest',header:'درخواست پذیرنده',kind:'combo'},
+ {key:'commitmentCreated',header:'تعهد ایجاد شد؟',kind:'select'},
+ {key:'commitmentType',header:'نوع تعهد',kind:'combo'},
+ {key:'nextCallNeeded',header:'تماس بعدی لازم؟',kind:'select'}];
+const SNAPSHOT={
+"source": "نسخه_۱۱_اصلاح_ارتباط_تعهدات_پرداخت_شورا_و_دسترسی.xlsx — شیت «تنظیمات»",
+"lists": {
+"ActionResults": {
+"range": "S2:S5",
+"title": "نتیجه اقدام",
+"values": [
+"در جریان",
+"انجام شد",
+"نیازمند پیگیری",
+"متوقف"
+]
+},
+"AttendanceModes": {
+"range": "I2:I6",
+"title": "نحوه حضور",
+"values": [
+"حضوری",
+"غیرحضوری",
+"عدم حضور",
+"نماینده",
+"ارسال لایحه"
+]
+},
+"AttendanceModesExtended": {
+"range": "Y2:Y5",
+"title": "نوع حضور تکمیلی",
+"values": [
+"حضوری",
+"غیرحضوری",
+"عدم حضور",
+"نماینده/وکیل"
+]
+},
+"AttendanceStatuses": {
+"range": "Q2:Q5",
+"title": "وضعیت حضور",
+"values": [
+"حاضر شد",
+"عدم حضور",
+"حضور غیرحضوری",
+"نامشخص"
+]
+},
+"CallOutcomes": {
+"range": "C2:C9",
+"title": "نتیجه تماس",
+"values": [
+"پاسخ داد",
+"پاسخ نداد",
+"تلفن خاموش",
+"خارج از دسترس",
+"شماره اشتباه",
+"شماره متعلق به شخص دیگر",
+"تماس رد شد",
+"تماس قطع شد"
+]
+},
+"CallOutcomesExtended": {
+"range": "T2:T6",
+"title": "نتیجه تماس نهایی",
+"values": [
+"پاسخ داد",
+"پاسخ نداد",
+"تلفن خاموش",
+"شماره اشتباه",
+"تماس مجدد"
+]
+},
+"CaseStages": {
+"range": "N2:N12",
+"title": "مرحله فعلی",
+"values": [
+"ثبت اولیه",
+"تماس اولیه",
+"در انتظار پرداخت",
+"دارای تعهد",
+"پیگیری تعهد",
+"ثبت در سامانه",
+"ابلاغ شده",
+"در انتظار جلسه",
+"جلسه برگزار شد",
+"در انتظار مستندات",
+"مختومه"
+]
+},
+"CaseStatuses": {
+"range": "O2:O5",
+"title": "وضعیت کلی",
+"values": [
+"فعال",
+"در انتظار پیگیری",
+"متوقف",
+"مختومه"
+]
+},
+"CommitmentStatuses": {
+"range": "G2:G5",
+"title": "وضعیت تعهد",
+"values": [
+"در انتظار اجرا",
+"اجرا شد",
+"اجرا نشد",
+"انجام ناقص"
+]
+},
+"CommitmentStatusExtended": {
+"range": "V2:V5",
+"title": "وضعیت تعهد ثبت‌شده",
+"values": [
+"در انتظار اجرا",
+"اجرا شد",
+"اجرا نشد",
+"لغو شد"
+]
+},
+"CommitmentTypes": {
+"range": "F2:F5",
+"title": "نوع تعهد",
+"values": [
+"تسویه کامل",
+"پرداخت بخشی",
+"پرداخت در تاریخ مشخص",
+"تقسیط"
+]
+},
+"ConversationOutcomes": {
+"range": "D2:D12",
+"title": "نتیجه مکالمه",
+"values": [
+"تعهد به تسویه",
+"درخواست مهلت",
+"درخواست تقسیط",
+"ادعای پرداخت",
+"انکار بدهی",
+"اعتراض",
+"درخواست حضور",
+"ارسال لایحه",
+"عدم توافق",
+"امتناع از پرداخت",
+"نیازمند بررسی"
+]
+},
+"ConversationOutcomesExtended": {
+"range": "W2:W9",
+"title": "نتیجه مکالمه تکمیلی",
+"values": [
+"تعهد به تسویه",
+"درخواست مهلت",
+"درخواست تقسیط",
+"امتناع از پرداخت",
+"پرداخت انجام شد",
+"ارجاع به شورا",
+"تماس مجدد",
+"سایر"
+]
+},
+"CouncilActions": {
+"range": "H2:H10",
+"title": "نوع اقدام شورا",
+"values": [
+"ثبت سامانه",
+"ارسال ابلاغ",
+"پیگیری ابلاغ",
+"تعیین جلسه",
+"برگزاری جلسه",
+"دریافت لایحه",
+"ثبت صورتجلسه",
+"پیگیری تعهد",
+"اعلام نتیجه"
+]
+},
+"FinalOutcomes": {
+"range": "K2:K4",
+"title": "نتیجه نهایی",
+"values": [
+"در جریان",
+"سازش",
+"عدم سازش"
+]
+},
+"MerchantRequests": {
+"range": "E2:E9",
+"title": "درخواست پذیرنده",
+"values": [
+"هیچ‌کدام",
+"مهلت",
+"تقسیط",
+"تسویه کامل",
+"اعتراض به بدهی",
+"حضور در شورا",
+"ارسال لایحه",
+"ادعای پرداخت"
+]
+},
+"NoticeStatuses": {
+"range": "P2:P5",
+"title": "وضعیت ابلاغ",
+"values": [
+"در انتظار ابلاغ",
+"ابلاغ شد",
+"ابلاغ ناموفق",
+"نیازمند پیگیری"
+]
+},
+"Payers": {
+"range": "R2:R5",
+"title": "پرداخت توسط",
+"values": [
+"پذیرنده",
+"ضامن",
+"شخص ثالث",
+"نامشخص"
+]
+},
+"PaymentApproval": {
+"range": "B2:B3",
+"title": "وضعیت تأیید پرداخت",
+"values": [
+"تأیید نشده",
+"تأیید شده"
+]
+},
+"PayMethods": {
+"range": "A2:A4",
+"title": "روش پرداخت",
+"values": [
+"اپلیکیشن تارا",
+"شماره حساب / شبا تارا",
+"مراجعه حضوری و پرداخت از طریق درگاه پوز شرکت تارا"
+]
+},
+"Priorities": {
+"range": "L2:L4",
+"title": "اولویت",
+"values": [
+"عادی",
+"مهم",
+"فوری"
+]
+},
+"RequestsExtended": {
+"range": "X2:X9",
+"title": "درخواست تکمیلی",
+"values": [
+"هیچ‌کدام",
+"مهلت",
+"تقسیط",
+"اعتراض به مبلغ",
+"ارسال رسید",
+"جلسه حضوری",
+"تماس مجدد",
+"سایر"
+]
+},
+"SessionResults": {
+"range": "J2:J5",
+"title": "نتیجه جلسه",
+"values": [
+"توافق",
+"عدم توافق",
+"تجدید جلسه",
+"در انتظار نتیجه"
+]
+},
+"SessionResultsExtended": {
+"range": "Z2:Z5",
+"title": "نتیجه جلسه تکمیلی",
+"values": [
+"توافق",
+"عدم توافق",
+"تجدید جلسه",
+"بدون نتیجه"
+]
+},
+"YesNo": {
+"range": "M2:M3",
+"title": "بله/خیر",
+"values": [
+"بله",
+"خیر"
+]
+}
+},
+"callSheetBindings": {
+"G": {
+"header": "نتیجه تماس",
+"list": "CallOutcomes"
+},
+"H": {
+"header": "نتیجه مکالمه",
+"list": "ConversationOutcomes"
+},
+"I": {
+"header": "درخواست پذیرنده",
+"list": "MerchantRequests"
+},
+"J": {
+"header": "تعهد ایجاد شد؟",
+"list": "YesNo"
+},
+"N": {
+"header": "تماس بعدی لازم؟",
+"list": "YesNo"
+},
+"K": {
+"header": "نوع تعهد",
+"list": "CommitmentTypes"
+}
+}
+};
+function deriveBindings(headerByCol,dvByCol){const b={};for(const f of CALL_FIELDS){const col=Object.keys(headerByCol).find(c=>normKey(headerByCol[c])===normKey(f.header));if(col&&dvByCol[col])b[f.key]=dvByCol[col]}return b}
+function snapshotState(){const hb={},dv={};for(const[c,v]of Object.entries(SNAPSHOT.callSheetBindings)){hb[c]=v.header;dv[c]=v.list}
+  return{source:'snapshot',sourceLabel:SNAPSHOT.source+' (نسخه تعبیه‌شده؛ با بارگذاری اکسل به‌روز می‌شود)',loadedAt:null,lists:SNAPSHOT.lists,bindings:deriveBindings(hb,dv)}}
+let optState=load(OPTS_KEY,null);if(!optState||!optState.lists||!optState.bindings)optState=snapshotState();
+function listValues(fieldKey){const n=optState.bindings[fieldKey];return(n&&optState.lists[n]&&optState.lists[n].values)||[]}
+function canonicalOption(fieldKey,input){const v=norm(input);if(!v)return'';return listValues(fieldKey).find(o=>norm(o)===v)??null}
+
+/* ---------- کارشناسان ---------- */
+const DEFAULT_WORKERS={K01:'کاشفی',K02:'مرادی',K03:'کاری',K04:'بنیادی',K05:'قنبری',K06:'رحمانی',K07:'حشمتی',K08:'غفوری',K09:'فراهانی',K10:'احمدی منش'};
+let workerNames=load(WORKER_KEY,null);if(!workerNames||typeof workerNames!=='object'||Array.isArray(workerNames))workerNames={};workerNames={...DEFAULT_WORKERS,...workerNames};
+const workerCodes=()=>Object.keys(workerNames).sort((a,b)=>(parseInt(a.slice(1))||0)-(parseInt(b.slice(1))||0));
+const workerLabel=code=>code?`${code} — ${workerNames[code]||DEFAULT_WORKERS[code]||'بدون نام'}`:'—';
+function codeForName(name){const n=norm(name);if(!n)return'';return workerCodes().find(c=>norm(workerNames[c])===n)||''}
+let prefs=load(PREFS_KEY,{});if(!prefs||typeof prefs!=='object')prefs={};
+function savePrefs(){store(PREFS_KEY,prefs)}
+
+/* ---------- تماس‌ها: مدل و مهاجرت سازگار با داده قبلی ---------- */
+const CALL_KEYS=['callId','caseId','nationalId','person','phone','delayDays','originalDebt','totalDebt','introDate','caseManagerName','caseManagerCode','worker','workerName','callDate','callTime','callResult','conversationResult','merchantRequest','commitmentCreated','commitmentType','commitmentDate','commitmentAmount','nextCallNeeded','nextDate','notes','createdAt','source','sourceCallId','legacyResult','createdAtEstimated'];
+function migrateCall(c){const o={...c};
+  for(const k of CALL_KEYS)if(o[k]===undefined)o[k]='';
+  if(!o.callResult&&c.result){o.callResult=c.result;o.legacyResult=true}
+  if(!o.workerName&&o.worker)o.workerName=workerNames[o.worker]||'';
+  return o}
+let calls=load(KEY,[]);if(!Array.isArray(calls))calls=[];calls=calls.filter(c=>c&&typeof c==='object'&&c.callId).map(migrateCall);
+let importedBundles=new Set(load(IMPORTS,[]));
+function saveCalls(){return store(KEY,calls)&&store(IMPORTS,[...importedBundles])}
+function makeId(){return 'CALL-'+Date.now().toString(36).toUpperCase()+'-'+crypto.randomUUID().replaceAll('-','').slice(0,12).toUpperCase()}
+const STABLE_ID=/^CALL-[0-9A-Z]{6,}-[0-9A-F]{12}$/;
+const CORE_SIG=['caseId','callDate','callTime','callResult','conversationResult','merchantRequest','commitmentCreated','commitmentType','commitmentDate','commitmentAmount','nextCallNeeded','nextDate','notes','worker'];
+const sigOf=c=>CORE_SIG.map(k=>norm(c[k])).join('|');
+
+/* ---------- پرونده‌های اصلی (از شیت «پرونده‌ها») ---------- */
+let master={meta:null,extraHeaders:[],cases:[]};
+(function loadMaster(){let m=load(CASES_KEY,null);
+  if(m&&Array.isArray(m.cases)){master={meta:m.meta||null,extraHeaders:m.extraHeaders||[],cases:m.cases}}
+  else{const old=load(CASES_V1,[]);if(Array.isArray(old)&&old.length){master={meta:{migratedFromV1:true},extraHeaders:[],cases:old.filter(c=>c&&c.caseCode)};store(CASES_KEY,master)}}})();
+let caseIndex=[];
+function rebuildIndex(){caseIndex=master.cases.map(c=>({c,code:norm(c.caseCode),nid:norm(c.nationalId),name:norm(c.person)}))}
+rebuildIndex();
+const masterByCode=()=>new Map(master.cases.map(c=>[c.caseCode,c]));
+
+/* ===== بخش ۳: ورود اکسل پرونده‌ها، فهرست‌ها، جست‌وجو و تنظیمات ===== */
+const CASE_ALIASES={
+ caseCode:['کد پرونده','شناسه پرونده'],
+ nationalId:['کد ملی','شماره ملی','شناسه ملی'],
+ person:['نام پذیرنده','نام و نام خانوادگی','نام شخص','نام'],
+ phone:['شماره تماس','تلفن','موبایل','شماره موبایل'],
+ delayDays:['روز دیرکرد','روزهای دیرکرد','دیرکرد'],
+ originalDebt:['اصل بدهی','بدهی اصلی','مبلغ اصل بدهی'],
+ totalDebt:['کل بدهی','بدهی کل','مبلغ کل بدهی','بدهی دیرکرد بروز','کل بدهی به روز'],
+ introDate:['تاریخ معرفی','تاریخ ارسال اظهارنامه','تاریخ اظهارنامه','تاریخ معرفی جهت اظهارنامه'],
+ caseManagerName:['کارشناس','نام کارشناس','کارشناس تماس']};
+const MAIN_KEYS=Object.keys(CASE_ALIASES);
+const STATE_FA={visible:'قابل مشاهده',hidden:'مخفی',veryHidden:'کاملاً مخفی'};
+
+async function readOptionLists(wk){
+  const ts=findSheet(wk,'تنظیمات');if(!ts)return null;
+  const t=await loadSheet(wk,ts);const lists={};
+  for(const[name,ref]of wk.defined){const r=resolveRange(wk,ref);if(!r||normKey(r.sheet)!==normKey('تنظیمات'))continue;
+    const vals=[];for(let rr=r.r1;rr<=r.r2;rr++){const row=t.rows.get(rr)||{};for(let c=colToNum(r.c1);c<=colToNum(r.c2);c++){const v=row[numToCol(c)];if(v!==undefined&&String(v).trim()!=='')vals.push(String(v).trim())}}
+    lists[name]={range:`${r.c1}${r.r1}:${r.c2}${r.r2}`,title:(t.rows.get(1)||{})[r.c1]||'',values:vals}}
+  let bindings={};const cs=findSheet(wk,'تاریخچه تماس');
+  if(cs){const headXml=await zipHead(wk.z,cs.path,/<\/row>/);const hrows=parseSheetXml(headXml||'',wk.sst).rows;const hdr=hrows.get(1)||{};
+    const full=await zipText(wk.z,cs.path);const dvByCol={};
+    for(const d of parseDataValidations(full||'')){const nm=d.formula1.trim();if(!lists[nm])continue;for(const sq of d.sqref.split(/\s+/)){const col=(/^([A-Z]+)/.exec(sq)||[])[1];if(col&&!dvByCol[col])dvByCol[col]=nm}}
+    bindings=deriveBindings(hdr,dvByCol)}
+  return{lists,bindings};
+}
+function diffLists(oldL,newL){const out=[];for(const n of new Set([...Object.keys(oldL),...Object.keys(newL)])){const a=(oldL[n]||{values:[]}).values,b=(newL[n]||{values:[]}).values;const add=b.filter(x=>!a.includes(x)),rem=a.filter(x=>!b.includes(x));if(!oldL[n])out.push(`فهرست جدید «${n}» (${b.length} گزینه)`);else if(!newL[n])out.push(`فهرست «${n}» در فایل جدید نیست`);else if(add.length||rem.length)out.push(`«${n}»: افزوده ${add.length} | حذف‌شده ${rem.length}`)}return out}
+async function readStructure(wk){
+  const out=[];for(const s of wk.sheets){let dim='',hdrs=[];try{const head=await zipHead(wk.z,s.path,/<\/row>/,300000)||'';dim=(/<dimension ref="([^"]+)"/.exec(head)||[])[1]||'';const rows=parseSheetXml(head,wk.sst).rows;const r1=rows.get(1)||{};hdrs=Object.keys(r1).sort((a,b)=>colToNum(a)-colToNum(b)).map(k=>r1[k])}catch{}
+    out.push({name:s.name,state:s.state,dim,headers:hdrs})}return out}
+function renderStructure(st,meta){const host=$('structureReport');host.replaceChildren();if(!st||!st.length){host.append(el('div',{class:'hint',text:'هنوز فایلی بارگذاری نشده است.'}));return}
+  host.append(el('div',{class:'hint',text:`فایل: ${meta?.fileName||'—'} | زمان بارگذاری: ${meta?.loadedAt?new Date(meta.loadedAt).toLocaleString('fa-IR'):'—'}`}));
+  const tbl=el('table',{class:'mini'},el('thead',null,el('tr',null,...['شیت','وضعیت','محدوده','عنوان ستون‌های ردیف اول'].map(h=>el('th',{text:h})))));const tb=el('tbody');
+  for(const s of st)tb.append(el('tr',null,el('td',{text:s.name}),el('td',{text:STATE_FA[s.state]||s.state}),el('td',{text:s.dim,dir:'ltr'}),el('td',{text:s.headers.length?`(${fa(s.headers.length)} ستون) `+s.headers.slice(0,10).join(' | ')+(s.headers.length>10?' …':''):'—'})));
+  tbl.append(tb);host.append(el('div',{class:'tablewrap'},tbl));
+  for(const[k,t]of [['warnings','هشدارهای کیفیت داده (رکورد پذیرفته شد؛ مقدار عیناً نگه داشته شد)'],['invalid','ردیف‌های نامعتبر (وارد نشدند)'],['dups','ردیف‌های تکراری در فایل (وارد نشدند)']])if(meta&&meta[k]&&meta[k].length)host.append(el('details',{class:'optbox'},el('summary',{text:`${t}: ${fa(meta[k].length)}`}),...meta[k].map(x=>el('div',{class:'hint',text:x}))))}
+function renderOptionLists(){const host=$('optionLists');host.replaceChildren();
+  host.append(el('div',{class:'hint',text:'منبع فهرست‌ها: '+(optState.sourceLabel||optState.source)+(optState.loadedAt?` | آخرین بارگذاری: ${new Date(optState.loadedAt).toLocaleString('fa-IR')}`:'')}));
+  const boundBy={};for(const f of CALL_FIELDS){const n=optState.bindings[f.key];if(n)(boundBy[n]=boundBy[n]||[]).push(f.header)}
+  const names=Object.keys(optState.lists);names.sort((a,b)=>(boundBy[b]?1:0)-(boundBy[a]?1:0)||a.localeCompare(b));
+  for(const n of names){const L=optState.lists[n];const b=boundBy[n];
+    host.append(el('details',{class:'optbox'+(b?' bound':'')},el('summary',null,`${n} — ${L.title||''} (${fa(L.values.length)} گزینه) `,el('span',{class:b?'tag ok':'tag',text:b?'متصل به فرم تماس: '+b.join('، '):'متصل به فیلد فرم تماس نیست'})),
+      el('div',{class:'chips'},...L.values.map(v=>el('span',{class:'chip',text:v}))),el('div',{class:'hint',text:`محدوده در شیت «تنظیمات»: ${L.range}`})))}}
+
+async function importCasesFromFile(file){
+  const wk=await readWorkbook(file);
+  const sh=findSheet(wk,'پرونده ها','پرونده‌ها');if(!sh)throw Error(`شیت «پرونده‌ها» در فایل پیدا نشد. شیت‌های موجود: ${wk.sheets.map(s=>s.name).join('، ')}`);
+  const sheet=await loadSheet(wk,sh,40);
+  let hr=0,hmap=null;
+  for(let r=1;r<=5;r++){const row=sheet.rows.get(r);if(!row)continue;const m={};for(const[c,v]of Object.entries(row)){const k=normKey(v);if(!(k in m))m[k]=c}
+    const has=ks=>ks.some(a=>normKey(a)in m);if(has(CASE_ALIASES.caseCode)&&has(CASE_ALIASES.nationalId)&&has(CASE_ALIASES.person)){hr=r;hmap=m;break}}
+  if(!hmap)throw Error('ستون‌های الزامی «کد پرونده»، «کد ملی» و «نام پذیرنده» در پنج ردیف اول شیت «پرونده‌ها» پیدا نشدند؛ فایل با ساختار نسخه ۱۱ سازگار نیست.');
+  const colOf={};for(const k of MAIN_KEYS){for(const a of CASE_ALIASES[k]){const c=hmap[normKey(a)];if(c){colOf[k]=c;break}}}
+  const headerRow=sheet.rows.get(hr),mainCols=new Set(Object.values(colOf));
+  const extraCols=Object.keys(headerRow).filter(c=>!mainCols.has(c)&&!/کمکی/.test(headerRow[c])).sort((a,b)=>colToNum(a)-colToNum(b));
+  const codeFormula=[...sheet.formulas].find(([k])=>k.startsWith(colOf.caseCode)&&/^[A-Z]+\d+$/.test(k)&&new RegExp('^'+colOf.caseCode+'\\d+$').test(k));
+  const canDerive=!!(codeFormula&&/"TARA-"\s*&\s*TRIM\(/.test(codeFormula[1]));
+  const rep={sheetName:sh.name,fileName:file.name,total:0,invalid:[],dups:[],warnings:[],derived:0,staged:[],extraHeaders:extraCols.map(c=>headerRow[c])};
+  const seen=new Set();const rowNums=[...sheet.rows.keys()].filter(r=>r>hr).sort((a,b)=>a-b);
+  for(const rn of rowNums){const row=sheet.rows.get(rn);const g=k=>colOf[k]?safe(row[colOf[k]],200):'';
+    const c={};for(const k of MAIN_KEYS)c[k]=g(k);
+    if(!MAIN_KEYS.some(k=>c[k]))continue;rep.total++;
+    if(!c.caseCode&&c.nationalId&&canDerive){c.caseCode='TARA-'+c.nationalId.trim();rep.derived++}
+    const miss=[];if(!c.caseCode)miss.push('کد پرونده');if(!c.nationalId)miss.push('کد ملی');if(!c.person)miss.push('نام پذیرنده');
+    if(miss.length){rep.invalid.push(`ردیف ${rn}: ${miss.join('، ')} خالی است`);continue}
+    if(seen.has(c.caseCode)){rep.dups.push(`ردیف ${rn}: کد پرونده ${c.caseCode} تکراری است (ردیف اول نگه داشته شد)`);continue}seen.add(c.caseCode);
+    if(!/^\d{10}$/.test(toLatinDigits(c.nationalId)))rep.warnings.push(`ردیف ${rn} (${c.caseCode}): کد ملی «${c.nationalId}» ۱۰ رقمی نیست؛ بدون تغییر نگه داشته شد`);
+    if(c.phone&&!/^09\d{9}$/.test(toLatinDigits(c.phone)))rep.warnings.push(`ردیف ${rn} (${c.caseCode}): قالب شماره تماس «${c.phone}» غیرمعمول است`);
+    c.x={};extraCols.forEach((col,i)=>{const v=row[col];if(v!==undefined&&String(v).trim()!=='')c.x[i]=safe(v,300)});
+    rep.staged.push(c)}
+  if(!rep.staged.length)throw Error('هیچ ردیف پرونده معتبری پیدا نشد؛ هیچ تغییری اعمال نشد.');
+  rep.options=await readOptionLists(wk);rep.structure=await readStructure(wk);
+  return rep}
+
+function applyCaseImport(rep){
+  // نگاشت ستون‌های اضافی فایل جدید به شاخص‌های ثابت master.extraHeaders
+  const eh=[...master.extraHeaders];const map=rep.extraHeaders.map(h=>{let i=eh.indexOf(h);if(i<0){eh.push(h);i=eh.length-1}return i});
+  const byCode=masterByCode();let added=0,updated=0,same=0;const upd=[],news=[];
+  for(const c of rep.staged){const x={};for(const[i,v]of Object.entries(c.x))x[map[+i]]=v;const nc={...c,x};const old=byCode.get(c.caseCode);
+    if(!old){news.push(nc);added++}else{const diff=MAIN_KEYS.some(k=>(old[k]||'')!==(nc[k]||''))||JSON.stringify(old.x||{})!==JSON.stringify(x);if(diff){upd.push(nc);updated++}else same++}}
+  return{added,updated,same,upd,news,eh}}
+async function commitCaseImport(rep,plan,doUpdate){
+  const prev={...master};const newMaster={meta:{fileName:rep.fileName,sheetName:rep.sheetName,loadedAt:nowIso(),rowCount:rep.total,structure:rep.structure,warnings:rep.warnings.slice(0,300),invalid:rep.invalid.slice(0,300),dups:rep.dups.slice(0,300),derived:rep.derived},extraHeaders:plan.eh,cases:master.cases.map(c=>c)};
+  if(doUpdate){const um=new Map(plan.upd.map(c=>[c.caseCode,c]));newMaster.cases=newMaster.cases.map(c=>um.get(c.caseCode)||c)}
+  newMaster.cases.push(...plan.news);
+  if(!store(CASES_KEY,newMaster)){master=prev;throw Error('ذخیره‌سازی مرورگر کافی نیست؛ هیچ تغییری اعمال نشد و داده‌های قبلی سالم ماندند.')}
+  master=newMaster;rebuildIndex()}
+
+/* ---------- کمبوباکس قابل جست‌وجو ---------- */
+function makeCombo(input,getItems,onPick,emptyText){
+  const wrap=input.parentElement;wrap.classList.add('combo');const list=el('div',{class:'combo-list',role:'listbox'});list.hidden=true;wrap.append(list);let items=[],active=-1;
+  const pick=it=>{list.hidden=true;active=-1;onPick(it)};
+  const render=()=>{items=getItems(input.value);list.replaceChildren();
+    if(!items.length)list.append(el('div',{class:'combo-empty',text:emptyText||'موردی پیدا نشد'}));
+    items.forEach((it,i)=>{if(it.more){list.append(el('div',{class:'combo-empty',text:it.label}));return}const d=el('div',{class:'combo-item'+(i===active?' active':''),role:'option'},el('span',{text:it.label}),it.sub?el('small',{text:it.sub,dir:'auto'}):null);d.addEventListener('mousedown',e=>{e.preventDefault();pick(it)});list.append(d)});list.hidden=false};
+  input.addEventListener('focus',render);input.addEventListener('input',()=>{active=-1;render()});input.addEventListener('blur',()=>setTimeout(()=>{list.hidden=true},150));
+  input.addEventListener('keydown',e=>{const sel=items.filter(i=>!i.more);if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(list.hidden)render();active=(active+(e.key==='ArrowDown'?1:-1)+sel.length)%Math.max(sel.length,1);[...list.querySelectorAll('.combo-item')].forEach((n,i)=>n.classList.toggle('active',i===active));list.querySelectorAll('.combo-item')[active]?.scrollIntoView({block:'nearest'})}
+    else if(e.key==='Enter'&&!list.hidden&&active>=0&&sel[active]){e.preventDefault();pick(sel[active])}else if(e.key==='Escape')list.hidden=true});
+  return{close:()=>{list.hidden=true}}}
+
+/* ---------- انتخاب و نمایش پرونده ---------- */
+let selectedCase=null;
+const LOOKUPS={lookupCaseCode:{field:'caseCode',idx:'code'},lookupNationalId:{field:'nationalId',idx:'nid'},lookupPerson:{field:'person',idx:'name'}};
+function searchCases(idx,q){const nq=norm(q);let m=caseIndex.filter(e=>!nq||e[idx].includes(nq));m.sort((a,b)=>(b[idx].startsWith(nq)-a[idx].startsWith(nq)));const total=m.length;m=m.slice(0,40);
+  const items=m.map(e=>({label:`${e.c.person} — ${e.c.caseCode}`,sub:`کد ملی ${e.c.nationalId}`,c:e.c}));if(total>40)items.push({more:true,label:`${fa(total)} مورد پیدا شد؛ ۴۰ مورد اول نمایش داده شد. عبارت دقیق‌تری وارد کنید.`});return items}
+function fillLookups(c){for(const[id,{field}]of Object.entries(LOOKUPS))$(id).value=c?c[field]:''}
+function infoRow(label,val,ltr){return el('div',{class:'kv'},el('small',{text:label}),el('strong',{text:val||'—',dir:ltr?'ltr':'auto'}))}
+function renderCaseCard(){const host=$('caseCard');host.replaceChildren();const c=selectedCase;
+  if(!c){host.hidden=true;return}host.hidden=false;const mgrCode=codeForName(c.caseManagerName);
+  host.append(el('div',{class:'cardgrid'},infoRow('کد پرونده',c.caseCode,true),infoRow('کد ملی',c.nationalId,true),infoRow('نام پذیرنده',c.person),infoRow('شماره تماس',c.phone,true),infoRow('روز دیرکرد',c.delayDays?fmtNum(c.delayDays)+' روز':''),infoRow('اصل بدهی',fmtNum(c.originalDebt)+(c.originalDebt?' ریال':'')),infoRow('کل بدهی',fmtNum(c.totalDebt)+(c.totalDebt?' ریال':'')),infoRow('تاریخ معرفی',c.introDate,true),infoRow('کارشناس پرونده',c.caseManagerName?(mgrCode?`${mgrCode} — ${c.caseManagerName}`:`${c.caseManagerName} (بدون کد در تنظیمات)`):'ثبت نشده در اکسل')));
+  if(!/^\d{10}$/.test(toLatinDigits(c.nationalId)))host.append(el('div',{class:'warn',text:`هشدار: کد ملی «${c.nationalId}» ۱۰ رقمی نیست (احتمالاً صفر ابتدا در فایل مبدأ حذف شده). مقدار عیناً نگه داشته شد؛ پیش از پیگیری، با فایل مبدأ تطبیق دهید.`}));
+  const sib=master.cases.filter(o=>o.nationalId===c.nationalId&&o.caseCode!==c.caseCode);
+  if(sib.length){host.append(el('div',{class:'warn'},`این کد ملی ${fa(sib.length+1)} پرونده دارد؛ پرونده‌های دیگر: `,...sib.map(o=>el('button',{type:'button',class:'btn secondary sm',text:o.caseCode,onclick:()=>selectCase(o)}))))}
+  const ex=Object.entries(c.x||{}).filter(([i])=>master.extraHeaders[i]);
+  if(ex.length)host.append(el('details',{class:'optbox'},el('summary',{text:`سایر ستون‌های شیت پرونده‌ها (${fa(ex.length)} مورد دارای مقدار)`}),el('div',{class:'cardgrid'},...ex.map(([i,v])=>infoRow(master.extraHeaders[i],v)))))}
+function selectCase(c){selectedCase=c;fillLookups(c);renderCaseCard();document.querySelectorAll('.combo-list').forEach(l=>{l.hidden=true});status('caseSelStatus',`پرونده انتخاب شد: ${c.caseCode} — ${c.person}`)}
+function clearCase(keepInputs){selectedCase=null;if(!keepInputs)fillLookups(null);renderCaseCard()}
+function wireLookups(){
+  for(const[id,{field,idx}]of Object.entries(LOOKUPS)){const inp=$(id);
+    makeCombo(inp,q=>searchCases(idx,q),it=>selectCase(it.c),'پرونده‌ای با این مشخصات پیدا نشد');
+    inp.addEventListener('input',()=>{if(selectedCase&&norm(inp.value)!==norm(selectedCase[field])){clearCase(true);status('caseSelStatus','انتخاب قبلی لغو شد؛ پرونده را دوباره انتخاب کنید.',false)}});
+    inp.addEventListener('change',()=>{const v=norm(inp.value);if(!v||selectedCase)return;const m=caseIndex.filter(e=>e[idx]===v);
+      if(m.length===1)selectCase(m[0].c);else if(m.length>1)status('caseSelStatus',`این مقدار به ${fa(m.length)} پرونده مربوط است؛ یکی را از فهرست انتخاب کنید.`,false);else status('caseSelStatus','پرونده‌ای با این مقدار پیدا نشد. ثبت تماس تا انتخاب یک پرونده معتبر ممکن نیست.',false)})}
+  $('clearCaseBtn').addEventListener('click',()=>{clearCase();status('caseSelStatus','انتخاب پرونده پاک شد.')})}
+function updateManualMode(){const has=master.cases.length>0;$('manualBox').hidden=has;$('lookupBox').hidden=!has;$('noMasterHint').hidden=has;
+  if(has){for(const id of ['lookupCaseCode','lookupNationalId','lookupPerson'])$(id).disabled=false}}
+
+/* ---------- تنظیمات کارشناسان ---------- */
+function renderWorkerSettings(){const host=$('workerSettings');host.replaceChildren();workerCodes().forEach(code=>{host.append(el('div',{class:'field'},el('label',{for:'workerName_'+code,text:code}),el('input',{id:'workerName_'+code,maxlength:'80',value:workerNames[code]||'',placeholder:'نام کارشناس'})))});renderWorkerMapReport()}
+function renderWorkerMapReport(){const host=$('workerMapReport');host.replaceChildren();
+  if(!master.cases.length){host.append(el('div',{class:'hint',text:'پس از بارگذاری اکسل پرونده‌ها، تطبیق نام کارشناسان فایل با کدها اینجا نمایش داده می‌شود.'}));return}
+  const cnt=new Map();for(const c of master.cases){const k=c.caseManagerName||'';cnt.set(k,(cnt.get(k)||0)+1)}
+  const lines=[];let bad=0;for(const[n,k]of [...cnt].sort((a,b)=>b[1]-a[1])){if(!n)continue;const code=codeForName(n);if(!code)bad++;lines.push(el('div',{class:code?'':'warn',text:code?`«${n}» ← ${code} — ${fa(k)} پرونده`:`«${n}» ← کدی در تنظیمات ندارد — ${fa(k)} پرونده. نام یکی از کدها را دقیقاً به این نام تغییر دهید یا کد جدید بیفزایید؛ این پرونده‌ها حذف نشده‌اند.`}))}
+  host.append(el('div',{class:'hint',text:'تطبیق نام کارشناس در شیت «پرونده‌ها» با نگاشت کدها:'}),...lines,el('div',{class:'hint',text:`پرونده‌های بدون کارشناس در اکسل: ${fa(cnt.get('')||0)} از ${fa(master.cases.length)}`+(bad?` | نام‌های بدون کد: ${fa(bad)}`:'')}))}
+function populateWorkers(){const sel=$('worker'),old=sel.value||prefs.worker||'K01';sel.replaceChildren();workerCodes().forEach(code=>sel.append(el('option',{value:code,text:workerLabel(code)})));sel.value=workerCodes().includes(old)?old:'K01';$('workerStat').textContent=workerLabel(sel.value)}
+
+/* ===== بخش ۴: فرم تماس، جدول، خروجی‌ها، ورود/تجمیع، پشتیبان، راه‌اندازی ===== */
+const FIELD_INPUT=k=>$('fld_'+k);
+const currentWorker=()=>$('worker').value;
+const isYes=v=>norm(v)==='بله';
+
+function setupFieldLists(){
+  for(const f of CALL_FIELDS){const inp=FIELD_INPUT(f.key),vals=listValues(f.key),ln=optState.bindings[f.key];
+    if(f.kind==='select'){const old=inp.value;inp.replaceChildren(el('option',{value:'',text:'— انتخاب کنید —'}),...vals.map(v=>el('option',{value:v,text:v})));inp.value=vals.includes(old)?old:''}
+    $('src_'+f.key).textContent=ln?`${fa(vals.length)} گزینه — فهرست «${ln}» (ستون «${f.header}» شیت «تاریخچه تماس» اکسل ۱۱)`:'این فیلد به فهرستی متصل نیست';}
+  updateConditional()}
+function wireFieldCombos(){for(const f of CALL_FIELDS)if(f.kind==='combo'){const inp=FIELD_INPUT(f.key);
+  makeCombo(inp,q=>{const nq=norm(q);return listValues(f.key).filter(v=>!nq||norm(v).includes(nq)).map(v=>({label:v,value:v}))},it=>{inp.value=it.value;inp.dispatchEvent(new Event('change'))},'گزینه‌ای با این عبارت در فهرست اکسل نیست')}}
+function updateConditional(){
+  const yes=isYes(FIELD_INPUT('commitmentCreated').value);
+  for(const id of ['fld_commitmentType','commitmentDate','commitmentAmount']){const n=$(id);n.disabled=!yes;if(!yes)n.value=''}
+  $('lbl_commitmentType').textContent=yes?'نوع تعهد *':'نوع تعهد';
+  const nx=isYes(FIELD_INPUT('nextCallNeeded').value);$('lbl_nextDate').textContent=nx?'تاریخ پیگیری بعدی *':'تاریخ پیگیری بعدی'}
+function resetCallForm(){$('callForm').reset();fillLookups(null);clearCase(true);$('callDate').value=todayJalali();$('callTime').value=nowTime();if(prefs.worker&&workerCodes().includes(prefs.worker))$('worker').value=prefs.worker;
+  for(const f of CALL_FIELDS)if(f.kind==='select')FIELD_INPUT(f.key).value='';updateConditional()}
+
+function collectCall(){
+  const errs=[];let src;
+  if(master.cases.length){if(!selectedCase)errs.push('ابتدا یک پرونده را با کد پرونده، کد ملی یا نام پذیرنده انتخاب کنید.');src=selectedCase||{}}
+  else{const id=safe($('caseId').value,80);if(!id)errs.push('شناسه پرونده الزامی است.');src={caseCode:id,nationalId:'',person:safe($('person').value,160),phone:safe($('phone').value,40),delayDays:safe($('delayDays').value,30),originalDebt:safe($('originalDebt').value,40),totalDebt:safe($('totalDebt').value,40),introDate:safe($('introDate').value,40),caseManagerName:''}}
+  const callDate=parseJalaliDate($('callDate').value);if(!callDate)errs.push(callDate===null?'قالب تاریخ تماس معتبر نیست (نمونه: 1405/07/17).':'تاریخ تماس الزامی است.');
+  const callTime=parseTime($('callTime').value);if(callTime===null)errs.push('قالب ساعت معتبر نیست (نمونه: 14:30).');
+  const v={};
+  for(const f of CALL_FIELDS){const inp=FIELD_INPUT(f.key);if(inp.disabled){v[f.key]='';continue}const c=canonicalOption(f.key,inp.value);if(c===null)errs.push(`«${f.header}»: مقدار باید دقیقاً یکی از گزینه‌های فهرست باشد.`);else if(!c&&f.required)errs.push(`«${f.header}» الزامی است.`);v[f.key]=c||''}
+  let commitmentDate='',commitmentAmount='';
+  if(isYes(v.commitmentCreated)){if(!v.commitmentType)errs.push('با «تعهد ایجاد شد؟ = بله»، «نوع تعهد» الزامی است.');
+    commitmentDate=parseJalaliDate($('commitmentDate').value);if(commitmentDate===null)errs.push('قالب تاریخ تعهد معتبر نیست (نمونه: 1405/08/01).');
+    commitmentAmount=parseAmount($('commitmentAmount').value);if(commitmentAmount===null)errs.push('مبلغ تعهد باید فقط عدد باشد.')}
+  const nextDate=parseJalaliDate($('nextDate').value);if(nextDate===null)errs.push('قالب تاریخ پیگیری بعدی معتبر نیست (نمونه: 1405/07/20).');
+  else if(isYes(v.nextCallNeeded)&&!nextDate)errs.push('با «تماس بعدی لازم؟ = بله»، تاریخ پیگیری بعدی الزامی است.');
+  if(errs.length)return{errs};
+  const w=currentWorker();
+  return{rec:{callId:makeId(),caseId:src.caseCode,nationalId:src.nationalId||'',person:src.person||'',phone:src.phone||'',delayDays:src.delayDays||'',originalDebt:src.originalDebt||'',totalDebt:src.totalDebt||'',introDate:src.introDate||'',caseManagerName:src.caseManagerName||'',caseManagerCode:codeForName(src.caseManagerName),worker:w,workerName:workerNames[w]||'',callDate,callTime:callTime||'',callResult:v.callResult,conversationResult:v.conversationResult,merchantRequest:v.merchantRequest,commitmentCreated:v.commitmentCreated,commitmentType:v.commitmentType,commitmentDate:commitmentDate||'',commitmentAmount:commitmentAmount||'',nextCallNeeded:v.nextCallNeeded,nextDate:nextDate||'',notes:safe($('notes').value,3000),createdAt:nowIso(),source:'local',sourceCallId:'',legacyResult:'',createdAtEstimated:''}}}
+
+/* ---------- جدول و فیلتر ---------- */
+const TABLE_COLS=[['زمان ثبت',c=>c.createdAt?new Date(c.createdAt).toLocaleString('fa-IR'):'—'],['کد پرونده',c=>c.caseId],['نام پذیرنده',c=>c.person||'—'],['کارشناس',c=>c.worker],['تاریخ/ساعت تماس',c=>[c.callDate,c.callTime].filter(Boolean).join(' ')||'—'],['نتیجه تماس',c=>c.callResult],['نتیجه مکالمه',c=>c.conversationResult||'—'],['درخواست پذیرنده',c=>c.merchantRequest||'—'],['تعهد',c=>isYes(c.commitmentCreated)?[c.commitmentType,c.commitmentAmount&&fmtNum(c.commitmentAmount),c.commitmentDate].filter(Boolean).join(' | '):(c.commitmentCreated||'—')],['پیگیری بعدی',c=>c.nextDate||'—'],['شرح تماس',c=>c.notes||'—'],['شناسه تماس',c=>c.callId]];
+function filteredCalls(){const q=norm($('search').value),fw=$('filterWorker').value,fr=$('filterResult').value;
+  return[...calls].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).filter(c=>(!fw||c.worker===fw)&&(!fr||c.callResult===fr)&&(!q||norm([c.caseId,c.nationalId,c.person,c.worker,workerNames[c.worker],c.workerName,c.callResult,c.conversationResult,c.merchantRequest,c.commitmentType,c.notes,c.phone,c.callId].join(' ')).includes(q)))}
+function render(){
+  const fwOld=$('filterWorker').value,frOld=$('filterResult').value;
+  $('filterWorker').replaceChildren(el('option',{value:'',text:'همه کارشناسان'}),...workerCodes().map(c=>el('option',{value:c,text:workerLabel(c)})));$('filterWorker').value=fwOld;
+  const results=[...new Set([...listValues('callResult'),...calls.map(c=>c.callResult).filter(Boolean)])];
+  $('filterResult').replaceChildren(el('option',{value:'',text:'همه نتیجه‌ها'}),...results.map(v=>el('option',{value:v,text:v})));$('filterResult').value=results.includes(frOld)?frOld:'';
+  const f=filteredCalls(),tb=$('rows');tb.replaceChildren();
+  for(const c of f){const tr=el('tr');TABLE_COLS.forEach(([,fn],i)=>{const td=el('td');const v=fn(c);if(i===3){td.append(el('span',{class:'tag',text:c.worker?`${c.worker} — ${c.workerName||workerNames[c.worker]||'بدون نام'}`:'—'}))}else td.textContent=v;tr.append(td)});tb.append(tr)}
+  $('empty').style.display=f.length?'none':'block';
+  $('total').textContent=fa(calls.length);$('cases').textContent=fa(new Set(calls.map(c=>norm(c.caseId))).size);$('workerStat').textContent=workerLabel(currentWorker());$('bundles').textContent=fa(importedBundles.size);$('masterCount').textContent=fa(master.cases.length);}
+const selectedCalls=()=>$('role').value==='worker'?calls.filter(c=>c.worker===currentWorker()):calls;
+function exportRecords(){let r=selectedCalls();if($('onlyFiltered').checked){const ids=new Set(filteredCalls().map(c=>c.callId));r=r.filter(c=>ids.has(c.callId))}return r}
+
+/* ---------- خروجی‌ها ---------- */
+const EXPORT_COLS=[['شناسه یکتای تماس','callId','text',34],['کد پرونده','caseId','text',20],['کد ملی','nationalId','text',14],['نام پذیرنده','person','text',22],['شماره تماس','phone','text',14],['روز دیرکرد','delayDays','num',10],['اصل بدهی','originalDebt','num',16],['کل بدهی','totalDebt','num',16],['تاریخ معرفی','introDate','text',13],['کارشناس پرونده (اکسل)','caseManagerName','text',16],['کد کارشناس پرونده','caseManagerCode','text',12],['کد کارشناس','worker','text',10],['نام کارشناس','workerName','text',14],['تاریخ تماس','callDate','text',12],['ساعت','callTime','text',8],['نتیجه تماس','callResult','text',18],['نتیجه مکالمه','conversationResult','text',18],['درخواست پذیرنده','merchantRequest','text',16],['تعهد ایجاد شد؟','commitmentCreated','text',12],['نوع تعهد','commitmentType','text',16],['تاریخ تعهد','commitmentDate','text',12],['مبلغ تعهد','commitmentAmount','num',16],['تماس بعدی لازم؟','nextCallNeeded','text',12],['تاریخ پیگیری بعدی','nextDate','text',14],['شرح تماس','notes','wrap',40],['زمان ثبت','createdAt','text',26],['منبع رکورد','source','text',12]];
+const exportVal=(c,k)=>k==='workerName'?(c.workerName||workerNames[c.worker]||''):String(c[k]??'');
+function exportFileName(ext){return `2671_calls_${$('role').value==='worker'?currentWorker():'ALL'}_${new Date().toISOString().slice(0,10)}.${ext}`}
+function exportXlsx(){const recs=exportRecords();
+  const main={name:'گزارش تماس‌ها',headers:EXPORT_COLS.map(c=>c[0]),rows:recs.map(r=>EXPORT_COLS.map(c=>exportVal(r,c[1]))),widths:EXPORT_COLS.map(c=>c[3]),kinds:EXPORT_COLS.map(c=>c[2])};
+  const wk={name:'کارشناسان',headers:['کد کارشناس','نام فعلی'],rows:workerCodes().map(c=>[c,workerNames[c]]),widths:[14,22],kinds:['text','text']};
+  downloadBlob(exportFileName('xlsx'),buildXlsx([main,wk]));return recs.length}
+function exportCsv(){const recs=exportRecords();const esc=v=>'"'+String(v??'').replaceAll('"','""')+'"';
+  download(exportFileName('csv'),[EXPORT_COLS.map(c=>esc(c[0])).join(','),...recs.map(r=>EXPORT_COLS.map(c=>esc(exportVal(r,c[1]))).join(','))].join('\r\n'),'text/csv;charset=utf-8');return recs.length}
+
+/* ---------- ورود و تجمیع تماس‌ها ---------- */
+const IMPORT_ALIASES={callId:['شناسه یکتای تماس','callId','شناسه تماس'],caseId:['کد پرونده','شناسه پرونده','caseId'],nationalId:['کد ملی','nationalId'],person:['نام پذیرنده','نام مخاطب','person'],phone:['شماره تماس','phone'],delayDays:['روز دیرکرد','delayDays'],originalDebt:['اصل بدهی','originalDebt'],totalDebt:['کل بدهی','totalDebt'],introDate:['تاریخ معرفی','introDate'],caseManagerName:['کارشناس پرونده (اکسل)','کارشناس'],caseManagerCode:['کد کارشناس پرونده'],worker:['کد کارشناس','worker'],workerName:['نام کارشناس'],callDate:['تاریخ تماس','callDate'],callTime:['ساعت','callTime'],callResult:['نتیجه تماس','نتیجه','result','callResult'],conversationResult:['نتیجه مکالمه','conversationResult'],merchantRequest:['درخواست پذیرنده','merchantRequest'],commitmentCreated:['تعهد ایجاد شد؟','commitmentCreated'],commitmentType:['نوع تعهد','commitmentType'],commitmentDate:['تاریخ تعهد','commitmentDate'],commitmentAmount:['مبلغ تعهد','commitmentAmount'],nextCallNeeded:['تماس بعدی لازم؟','nextCallNeeded'],nextDate:['تاریخ پیگیری بعدی','تاریخ تماس بعدی','تاریخ پیگیری','nextDate'],notes:['شرح تماس','توضیحات','notes'],createdAt:['زمان ثبت','تاریخ ثبت','createdAt']};
+function cleanRecord(raw,trustId,rep){
+  const g=k=>safe(raw[k],k==='notes'?3000:200);const r={};for(const k of CALL_KEYS)r[k]=g(k);
+  if(!r.caseId||!r.callResult)return{invalid:`${!r.caseId?'کد پرونده':'نتیجه تماس'} خالی است`};
+  if(!r.callId||(!trustId&&!STABLE_ID.test(r.callId))){if(r.callId)r.sourceCallId=r.callId;r.callId='LEG-'+hash53([r.caseId,r.callDate,r.callTime,r.callResult,r.conversationResult,r.merchantRequest,r.commitmentType,r.commitmentAmount,r.nextDate,r.notes,r.worker||r.caseManagerName].map(norm).join('|'));rep.derived++}
+  for(const k of ['callDate','commitmentDate','nextDate']){if(r[k]){const p=parseJalaliDate(r[k]);if(p)r[k]=p;else{rep.badDates++}}}
+  if(r.callTime){const p=parseTime(r.callTime);if(p)r.callTime=p;else rep.badDates++}
+  if(r.commitmentAmount){const p=parseAmount(r.commitmentAmount);if(p)r.commitmentAmount=p}
+  const mc=masterByCode().get(r.caseId);
+  if(mc){for(const k of['nationalId','person','phone','delayDays','originalDebt','totalDebt','introDate','caseManagerName'])if(!r[k])r[k]=mc[k]||''}else if(master.cases.length)rep.noCase++;
+  if(!r.caseManagerCode&&r.caseManagerName)r.caseManagerCode=codeForName(r.caseManagerName);
+  let w=r.worker.toUpperCase();if(/^K\d+$/.test(w))r.worker=w;else{const byName=codeForName(r.worker||r.workerName);if(byName)r.worker=byName;else if(!r.worker&&r.caseManagerCode){r.worker=r.caseManagerCode;rep.workerInferred++}else if(r.worker){r.workerName=r.workerName||r.worker;r.worker='';rep.workerUnknown++}}
+  if(!r.workerName&&r.worker)r.workerName=workerNames[r.worker]||'';
+  for(const f of CALL_FIELDS){if(r[f.key]){const c=canonicalOption(f.key,r[f.key]);if(c)r[f.key]=c;else rep.outsideList++}}
+  const t=raw.createdAt?new Date(raw.createdAt):null;if(t&&!Number.isNaN(t.getTime()))r.createdAt=t.toISOString();else{r.createdAt=nowIso();r.createdAtEstimated='1'}
+  return{rec:r}}
+function ingestCalls(records,{label,trustId,bundleId}){
+  const rep={added:0,dupes:0,invalid:0,conflicts:0,derived:0,badDates:0,noCase:0,outsideList:0,workerInferred:0,workerUnknown:0,invalidSamples:[],conflictSamples:[],total:records.length};
+  const byId=new Map(calls.map(c=>[c.callId,c])),staged=[];
+  for(const raw of records){if(!raw||typeof raw!=='object'){rep.invalid++;continue}
+    const o=cleanRecord(raw,trustId,rep);if(o.invalid){rep.invalid++;if(rep.invalidSamples.length<5)rep.invalidSamples.push(o.invalid);continue}
+    const r=o.rec,ex=byId.get(r.callId);
+    if(ex){if(sigOf(ex)===sigOf(r))rep.dupes++;else{rep.conflicts++;if(rep.conflictSamples.length<8)rep.conflictSamples.push(r.callId)}continue}
+    r.source=label;byId.set(r.callId,r);staged.push(r);rep.added++}
+  rep.staged=staged;rep.bundleId=bundleId;return rep}
+function reportText(rep,title){const L=[title,`ردیف‌های خوانده‌شده: ${fa(rep.total)}`,`تماس‌های افزوده‌شده: ${fa(rep.added)}`,`تکراری (بدون تغییر): ${fa(rep.dupes)}`,`نامعتبر: ${fa(rep.invalid)}`,`دارای تعارض (شناسه یکسان، محتوای متفاوت — اعمال نشد): ${fa(rep.conflicts)}`];
+  if(rep.derived)L.push(`بدون شناسه پایدار — شناسه ثابت مشتق‌شده از محتوا: ${fa(rep.derived)}`);if(rep.badDates)L.push(`تاریخ/ساعت با قالب نامعتبر (بدون تغییر ذخیره شد): ${fa(rep.badDates)}`);if(rep.noCase)L.push(`تماس‌های دارای کد پرونده خارج از فهرست پرونده‌های بارگذاری‌شده: ${fa(rep.noCase)}`);if(rep.outsideList)L.push(`مقدارهای خارج از فهرست‌های اکسل (بدون تغییر ذخیره شد): ${fa(rep.outsideList)}`);if(rep.workerInferred)L.push(`کارشناس از ستون کارشناس پرونده استنباط شد: ${fa(rep.workerInferred)}`);if(rep.workerUnknown)L.push(`کارشناس بدون کد: ${fa(rep.workerUnknown)}`);
+  if(rep.invalidSamples.length)L.push('نمونه نامعتبر: '+rep.invalidSamples.join(' | '));if(rep.conflictSamples.length)L.push('شناسه‌های دارای تعارض: '+rep.conflictSamples.join('، '));return L.join('\n')}
+function commitCalls(rep){const prev=calls.length;calls.push(...rep.staged);if(rep.bundleId)importedBundles.add(rep.bundleId);if(!saveCalls()){calls.length=prev;if(rep.bundleId)importedBundles.delete(rep.bundleId);throw Error('ذخیره‌سازی مرورگر کافی نیست؛ هیچ تماسی افزوده نشد. ابتدا پشتیبان بگیرید.')}}
+async function importCallsExcel(){
+  const file=$('callsExcelFile').files[0];if(!file)throw Error('ابتدا فایل اکسل تماس‌ها را انتخاب کنید.');
+  const wk=await readWorkbook(file);const sh=findSheet(wk,'گزارش تماس‌ها','گزارش تماس ها','تاریخچه تماس','تماس ها')||wk.sheets[0];if(!sh)throw Error('هیچ شیتی در فایل وجود ندارد.');
+  const sheet=await loadSheet(wk,sh,60);let hr=0,hmap=null;
+  for(let r=1;r<=5;r++){const row=sheet.rows.get(r);if(!row)continue;const m={};for(const[c,v]of Object.entries(row)){const k=normKey(v);if(!(k in m))m[k]=c}if(IMPORT_ALIASES.caseId.some(a=>normKey(a)in m)){hr=r;hmap=m;break}}
+  if(!hmap)throw Error(`ستون «کد پرونده» در شیت «${sh.name}» پیدا نشد؛ از خروجی اکسل همین سامانه یا شیت «تاریخچه تماس» نسخه ۱۱ استفاده کنید.`);
+  const colOf={};for(const[k,al]of Object.entries(IMPORT_ALIASES)){for(const a of al){const c=hmap[normKey(a)];if(c){colOf[k]=c;break}}}
+  const records=[];for(const rn of [...sheet.rows.keys()].filter(r=>r>hr).sort((a,b)=>a-b)){const row=sheet.rows.get(rn);const o={};for(const[k,c]of Object.entries(colOf))o[k]=row[c]??'';if(!o.caseId&&!o.callResult&&!o.notes)continue;records.push(o)}
+  if(!records.length)throw Error(`شیت «${sh.name}» هیچ ردیف تماسی ندارد.`);
+  const rep=ingestCalls(records,{label:'excel-import',trustId:false});return{rep,sheet:sh.name}}
+async function readJson(id,msg){const f=$(id).files[0];if(!f)throw Error(msg);try{return JSON.parse(await f.text())}catch{throw Error('فایل JSON معتبر نیست.')}}
+
+/* ---------- پشتیبان‌گیری و بازیابی ---------- */
+function makeBackup(){return{format:'S2671_FULL_BACKUP',version:VERSION,createdAt:nowIso(),calls,importedBundles:[...importedBundles],workerNames,master,optionLists:optState,prefs}}
+async function restoreBackup(){
+  const obj=await readJson('importFile','ابتدا فایل پشتیبان (JSON) را انتخاب کنید.');
+  if(!obj||obj.format!=='S2671_FULL_BACKUP'||![1,2].includes(obj.version)||!Array.isArray(obj.calls)||!Array.isArray(obj.importedBundles))throw Error('این فایل پشتیبان کامل معتبر نیست.');
+  const bad=obj.calls.filter(c=>!(c&&c.callId&&c.caseId&&c.worker&&(c.callResult||c.result)&&c.createdAt));if(bad.length)throw Error(`پشتیبان شامل ${fa(bad.length)} رکورد ناقص است؛ برای حفظ داده‌ها بازیابی لغو شد.`);
+  if(!confirm('بازیابی، تماس‌ها'+(obj.version===2?'، فهرست پرونده‌ها، نام کارشناسان و فهرست‌های گزینه':'')+' این مرورگر را با نسخه پشتیبان جایگزین می‌کند. یک نسخه از وضعیت فعلی قبل از آن در مرورگر نگه داشته می‌شود. ادامه می‌دهید؟'))return false;
+  store('s2671_prerestore_v1',{createdAt:nowIso(),data:makeBackup()});
+  calls=obj.calls.map(migrateCall);importedBundles=new Set(obj.importedBundles);
+  if(obj.version===2){if(obj.workerNames&&typeof obj.workerNames==='object')workerNames={...DEFAULT_WORKERS,...obj.workerNames};store(WORKER_KEY,workerNames);
+    if(obj.master&&Array.isArray(obj.master.cases)){master={meta:obj.master.meta||null,extraHeaders:obj.master.extraHeaders||[],cases:obj.master.cases};store(CASES_KEY,master);rebuildIndex()}
+    if(obj.optionLists&&obj.optionLists.lists&&obj.optionLists.bindings){optState=obj.optionLists;store(OPTS_KEY,optState)}}
+  if(!saveCalls())throw Error('ذخیره‌سازی مرورگر کافی نیست.');return true}
+
+/* ---------- راه‌اندازی و رویدادها ---------- */
+function refreshAll(){populateWorkers();renderWorkerSettings();setupFieldLists();renderOptionLists();renderStructure(master.meta&&master.meta.structure,master.meta);updateManualMode();clearCase(true);fillLookups(null);render()}
+function boot(){
+  $('role').value=prefs.role||'worker';
+  populateWorkers();wireLookups();wireFieldCombos();setupFieldLists();
+  $('callDate').value=todayJalali();$('callTime').value=nowTime();
+  $('worker').addEventListener('change',()=>{prefs.worker=currentWorker();savePrefs();render()});
+  $('role').addEventListener('change',()=>{prefs.role=$('role').value;savePrefs()});
+  $('fld_commitmentCreated').addEventListener('change',updateConditional);$('fld_nextCallNeeded').addEventListener('change',updateConditional);
+  ['search','filterWorker','filterResult'].forEach(id=>$(id).addEventListener('input',render));$('refreshBtn').addEventListener('click',render);
+  $('settingsToggle').addEventListener('click',()=>{const p=$('settingsPanel');p.hidden=!p.hidden;if(!p.hidden)renderWorkerSettings()});
+  $('optionsToggle').addEventListener('click',()=>{const p=$('optionsPanel');p.hidden=!p.hidden;if(!p.hidden){renderOptionLists();renderStructure(master.meta&&master.meta.structure,master.meta)}});
+  $('saveWorkersBtn').addEventListener('click',()=>{const next={},seen=new Set();for(const code of workerCodes()){const name=safe($('workerName_'+code).value,80);if(!name){status('settingsStatus',`نام ${code} خالی است؛ برای هر کد نام وارد کنید.`,false);return}if(seen.has(norm(name))){status('settingsStatus',`نام «${name}» برای بیش از یک کد وارد شده است؛ نام‌ها باید یکتا باشند تا تطبیق با اکسل درست کار کند.`,false);return}seen.add(norm(name));next[code]=name}
+    if(!store(WORKER_KEY,next)){status('settingsStatus','ذخیره انجام نشد؛ فضای مرورگر کافی نیست.',false);return}workerNames=next;populateWorkers();renderWorkerMapReport();render();status('settingsStatus','نام کارشناسان ذخیره شد. کد کارشناس در سوابق ثابت است و نام ثبت‌شده در سوابق قبلی تغییر نکرد؛ تنها نمایش نام‌های فعلی به‌روز شد. این تنظیمات روی همین مرورگر اعمال شده است.')});
+  $('addWorkerBtn').addEventListener('click',()=>{const n=Math.max(0,...workerCodes().map(c=>parseInt(c.slice(1))||0))+1;const code='K'+String(n).padStart(2,'0');workerNames[code]='';renderWorkerSettings();status('settingsStatus',`کد ${code} اضافه شد؛ نام را وارد و ذخیره کنید.`)});
+  $('resetWorkersBtn').addEventListener('click',()=>{if(!confirm('نام‌ها به نگاشت اولیه K01 تا K10 بازگردانده می‌شود (کدهای اضافه‌شده حفظ می‌شوند). ادامه می‌دهید؟'))return;const n={...workerNames};for(const[k,v]of Object.entries(DEFAULT_WORKERS))n[k]=v;workerNames=n;store(WORKER_KEY,workerNames);renderWorkerSettings();populateWorkers();render();status('settingsStatus','نام‌های اولیه بازیابی و ذخیره شدند.')});
+  $('resetOptionsBtn').addEventListener('click',()=>{if(!confirm('فهرست‌ها به نسخه تعبیه‌شده از فایل اکسل ۱۱ بازگردانده می‌شود. ادامه می‌دهید؟'))return;optState=snapshotState();store(OPTS_KEY,optState);setupFieldLists();renderOptionLists();status('optionsStatus','فهرست‌ها به نسخه تعبیه‌شده بازگردانده شدند.')});
+  /* بارگذاری اکسل پرونده‌ها */
+  $('loadCasesBtn').addEventListener('click',async()=>{const btn=$('loadCasesBtn');
+    try{const file=$('caseExcelFile').files[0];if(!file)throw Error('ابتدا فایل اکسل را انتخاب کنید.');btn.disabled=true;status('caseExcelStatus','در حال خواندن و اعتبارسنجی فایل… (برای فایل‌های بزرگ چند ثانیه طول می‌کشد)');
+      const rep=await importCasesFromFile(file);const plan=applyCaseImport(rep);
+      const sum=[`شیت: «${rep.sheetName}» — ردیف‌های دارای داده: ${fa(rep.total)}`,`معتبر: ${fa(rep.staged.length)} | نامعتبر: ${fa(rep.invalid.length)} | تکراری در فایل: ${fa(rep.dups.length)} | هشدار: ${fa(rep.warnings.length)}`,`پرونده جدید: ${fa(plan.added)} | موجود و تغییرکرده: ${fa(plan.updated)} | موجود و بدون تغییر: ${fa(plan.same)}`];
+      if(rep.derived)sum.push(`کد پرونده ${fa(rep.derived)} ردیف طبق فرمول خود فایل مرجع (TARA-کد ملی) محاسبه شد.`);
+      if(rep.invalid.length)sum.push('نمونه نامعتبر: '+rep.invalid.slice(0,3).join(' | '));if(rep.warnings.length)sum.push('نمونه هشدار: '+rep.warnings.slice(0,3).join(' | '));
+      if(plan.added||plan.updated){if(!confirm(sum.join('\n')+'\n\nپرونده‌های جدید افزوده شود؟ (هیچ پرونده یا تماسی حذف نمی‌شود)')){status('caseExcelStatus','عملیات توسط شما لغو شد؛ هیچ تغییری اعمال نشد.\n'+sum.join('\n'),false);return}}
+      let doUpdate=false;if(plan.updated)doUpdate=confirm(`${fa(plan.updated)} پرونده موجود در فایل مقدار متفاوتی دارد.\nOK = به‌روزرسانی این پرونده‌ها | Cancel = فقط افزودن پرونده‌های جدید و حفظ مقدارهای فعلی`);
+      await commitCaseImport(rep,plan,doUpdate);
+      let optMsg='فهرست‌های گزینه: شیت «تنظیمات» در فایل نبود؛ فهرست قبلی حفظ شد.';
+      if(rep.options&&Object.keys(rep.options.lists).length){const b=Object.keys(rep.options.bindings).length?{...optState.bindings,...rep.options.bindings}:optState.bindings;const diff=diffLists(optState.lists,rep.options.lists);optState={source:'workbook',sourceLabel:`شیت «تنظیمات» فایل ${file.name}`,loadedAt:nowIso(),lists:rep.options.lists,bindings:b};store(OPTS_KEY,optState);
+        optMsg=`فهرست‌های گزینه از فایل خوانده شد (${fa(Object.keys(rep.options.lists).length)} فهرست؛ فیلدهای متصل به فرم تماس: ${fa(Object.keys(rep.options.bindings).length)} از ${fa(CALL_FIELDS.length)}).`+(diff.length?'\nتفاوت با فهرست قبلی: '+diff.join(' | '):'\nتفاوتی با فهرست قبلی نبود.')+(Object.keys(rep.options.bindings).length?'':'\nهشدار: اتصال فهرست‌ها به ستون‌های شیت تاریخچه تماس از فایل خوانده نشد؛ اتصال قبلی حفظ شد.')}
+      refreshAll();
+      status('caseExcelStatus',`بارگذاری موفق: ${fa(plan.added)} پرونده جدید افزوده شد، ${fa(doUpdate?plan.updated:0)} به‌روزرسانی شد. مجموع پرونده‌ها: ${fa(master.cases.length)}.\n`+sum.join('\n')+'\n'+optMsg)}
+    catch(err){status('caseExcelStatus','ورود اکسل انجام نشد (داده‌های قبلی سالم ماندند): '+(err.message||'خطای ناشناخته'),false)}finally{btn.disabled=false}});
+  /* ثبت تماس */
+  $('callForm').addEventListener('submit',e=>{e.preventDefault();const o=collectCall();if(o.errs){status('formStatus','ثبت انجام نشد:\n• '+o.errs.join('\n• '),false);return}
+    calls.push(o.rec);if(!saveCalls()){calls=calls.filter(x=>x.callId!==o.rec.callId);status('formStatus','ذخیره انجام نشد؛ احتمالاً فضای ذخیره‌سازی مرورگر کافی نیست. از پشتیبان استفاده کنید.',false);return}
+    const w=o.rec.worker;resetCallForm();$('worker').value=w;status('formStatus',`تماس برای پرونده ${o.rec.caseId} با شناسه یکتای ${o.rec.callId} ثبت شد.`);render()});
+  $('callForm').addEventListener('reset',()=>setTimeout(()=>{fillLookups(null);clearCase(true);updateConditional()},0));
+  /* خروجی‌ها */
+  $('exportBtn').addEventListener('click',()=>{const records=exportRecords();const bundle={format:'S2671_CONTACT_BUNDLE',version:VERSION,bundleId:'BUNDLE-'+crypto.randomUUID(),exportedAt:nowIso(),exportedBy:currentWorker(),scope:$('role').value,recordCount:records.length,records};download(exportFileName('json').replace('calls','bundle'),JSON.stringify(bundle,null,2));status('ioStatus',`بسته خروجی ساخته شد؛ ${fa(records.length)} تماس در آن قرار گرفت.`)});
+  $('csvBtn').addEventListener('click',()=>{try{const n=exportCsv();status('ioStatus',`گزارش CSV شامل ${fa(n)} تماس آماده شد. توجه: اگر CSV را مستقیم در Excel باز کنید، صفرهای ابتدای کد ملی ممکن است حذف شود؛ برای داده دقیق از خروجی .xlsx استفاده کنید.`)}catch(err){status('ioStatus','خروجی CSV انجام نشد: '+err.message,false)}});
+  $('xlsxBtn').addEventListener('click',()=>{try{const n=exportXlsx();status('ioStatus',`خروجی اکسل (.xlsx) شامل ${fa(n)} تماس آماده شد.`)}catch(err){status('ioStatus','خروجی اکسل انجام نشد: '+(err.message||'خطای ناشناخته'),false)}});
+  $('backupBtn').addEventListener('click',()=>{download('2671_backup_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(makeBackup(),null,2));status('ioStatus','پشتیبان کامل (تماس‌ها، پرونده‌ها، نام کارشناسان و فهرست‌های گزینه) صادر شد.')});
+  /* ورود و تجمیع */
+  $('importExcelCallsBtn').addEventListener('click',async()=>{const btn=$('importExcelCallsBtn');btn.disabled=true;try{status('ioStatus','در حال خواندن فایل…');const{rep,sheet}=await importCallsExcel();
+      if(rep.added&&!confirm(reportText(rep,`شیت «${sheet}»`)+'\n\nتماس‌های جدید افزوده شوند؟'))throw Error('عملیات توسط شما لغو شد؛ هیچ تغییری اعمال نشد.');
+      if(rep.added)commitCalls(rep);render();status('ioStatus',reportText(rep,`تجمیع اکسل از شیت «${sheet}» تمام شد.`),true)}
+    catch(err){status('ioStatus','ورود اکسل تماس‌ها انجام نشد: '+(err.message||'خطای ناشناخته'),false)}finally{btn.disabled=false}});
+  $('importBtn').addEventListener('click',async()=>{try{const obj=await readJson('importFile','ابتدا فایل JSON را انتخاب کنید.');
+      if(!obj||obj.format!=='S2671_CONTACT_BUNDLE'||![1,2].includes(obj.version)||!Array.isArray(obj.records)||typeof obj.bundleId!=='string')throw Error('ساختار بسته معتبر نیست یا نسخه آن پشتیبانی نمی‌شود.');
+      if(importedBundles.has(obj.bundleId)){status('ioStatus','این بسته قبلاً وارد شده است؛ هیچ رکوردی اضافه نشد.',false);return}
+      const rep=ingestCalls(obj.records,{label:'import',trustId:true,bundleId:obj.bundleId});commitCalls(rep);render();status('ioStatus',reportText(rep,'تجمیع بسته JSON انجام شد.'))}
+    catch(err){status('ioStatus','ورود انجام نشد: '+(err.message||'خطای ناشناخته'),false)}});
+  $('restoreBtn').addEventListener('click',async()=>{try{if(await restoreBackup()){refreshAll();status('ioStatus',`بازیابی کامل شد؛ ${fa(calls.length)} تماس و ${fa(master.cases.length)} پرونده بازیابی شد.`)}}catch(err){status('ioStatus','بازیابی انجام نشد: '+(err.message||'خطای ناشناخته'),false)}});
+  refreshAll();$('callDate').value=todayJalali();$('callTime').value=nowTime();
+}
+boot();
+window.__crm={get calls(){return calls},get master(){return master},get optState(){return optState},workerNames:()=>workerNames};
+
+
+})();
+</script></body></html>
